@@ -1,0 +1,2 @@
+exclude: [config.rb, nginx.conf, Rakefile, README.md, log]
+permalink: /:title
