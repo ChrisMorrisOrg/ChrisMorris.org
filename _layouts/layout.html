@@ -83,7 +83,17 @@
     <script type="application/javascript">
 
       function getQuote(){
-        $('.box').load('http://chrismorris.org/quotes');
+        $.ajax({
+          type: 'POST',
+          url: 'http://chrismorris.org/quotes',
+          dataType: 'json',
+          success: function(data) {
+            $('.box').text(data.quote + "<span class="quoteAuthor">~" + data.author + "~</span>");
+          },
+          error: function(data, textStatus, errorThrown) {
+            $('.box').text("“Doesn't it just suck when the quotes system fails?”<span class="quoteAuthor">~ Chris Morris ~</span>");
+          }
+        });
       };
 
       /* window.onload = function(){document.getElementById("container").className = "active";};*/
