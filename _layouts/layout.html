@@ -1,0 +1,121 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,200italic,400italic,600italic,700italic|Orbitron:400,900,700,500' rel='stylesheet' type='text/css'>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ page.title }} &raquo; ChrisMorris.org</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/{% if page.colour %}{{ page.colour }}{% else %}blue{% endif %}.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <!--<script src="js/libs/modernizr-2.5.3.min.js"></script>-->
+</head>
+<body>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36771574-1']);
+  _gaq.push(['_setDomainName', 'chrismorris.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  <div id="container" class="inactive">
+    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+         chromium.org/developers/how-tos/chrome-frame-getting-started -->
+    <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+    <header class="clearfix banner">
+      <a href="/"><h1>Chris Morris</h1></a>
+      <h2>Scitechivity</h2>
+    </header>
+    
+    <section id="sidebar">
+      <div id="offset">
+        <nav>
+          <ul>
+            <li><a href="/"><h1 class="blue">Blog</h1></a></li>
+            <li><a href="/projects/"><h1 class="purple">Projects</h1></a></li>
+            <li><a href="/resume/"><h1 class="red">Résumé</h1></a></li>
+            <li><a href="/about/"><h1 class="orange">About</h1></a></li>
+            <li><a href="/contact/"><h1 class="green">Contact</h1></a></li>
+          </ul>
+        </nav>
+        <h1 class="default-static">Random Quote</h1>
+        <div class="box">
+        “Ultimate automation … will make our modern industry as primitive and outdated as the stone age man looks to us today.”
+        <span style="text-align: center; display: block;">~ Albert Einstein ~</span>
+        </div>
+        <h1 class="default-static">Friends</h1>
+        <ul class="sub">
+          <li><a target="_blank" href="http://feross.org/">Feross Aboukhadijeh</a></li>
+          <li><a target="_blank" href="http://macbrosplace.com/">John MacDonald</a></li>
+          <li><a target="_blank" href="http://johnraul.com/">John Raul</a></li>
+          <li><a target="_blank" href="http://jonrodriguez.org/">Jon Rodriguez</a></li>
+          <li><a target="_blank" href="http://backflipboy.bananasontoast.org/">Kevin Wilson</a></li>
+          <li><a target="_blank" href="http://mike.bitrevision.com/">Michael Billington</a></li>
+          <li><a target="_blank" href="http://michaelhossen.com/">Michael Hossen</a></li>
+        </ul>
+      </div>
+    </section>
+    
+    <section id="content" role="main">
+      {{ content }}
+    </section>
+    
+    <footer>
+  
+    </footer>
+  
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <!--<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>-->
+    <!--<script src="js/plugins.js"></script>-->
+    <!--<script src="js/script.js"></script>-->
+    <script type="application/javascript">
+      /* window.onload = function(){document.getElementById("container").className = "active";};*/
+      $(document).ready(function(){
+
+        $('#sidebar').height($(document).height());
+
+        var slug;
+        slug = $('.views').data('slug');
+
+        $.ajax({
+          type: 'POST',
+          url: 'http://chrismorris.org/views',
+          data: {
+            slug: slug
+          },
+          dataType: 'json',
+          success: function(data) {
+            $('.views').text(data.views + " views");
+            $('.views').removeClass('inactive').addClass('active');
+          },
+          error: function(data, textStatus, errorThrown) {
+            $('.views').text("ERR");
+            $('.views').removeClass('inactive').addClass('active');
+          }
+        });
+
+          document.getElementById("container").className = "active";
+
+
+      });
+
+      window.onbeforeunload = function(){document.getElementById("container").className = "inactive";};
+
+    </script>
+  </div>
+</body>
+</html>
