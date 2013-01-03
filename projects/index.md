@@ -7,3 +7,30 @@ type: post
 published: true
 ---
 A more detailed section is coming soon. In the meantime, you can checkout some of my projects on my [GitHub page](http://github.com/ChrisMorrisOrg).
+
+      <ul class="link-list">
+        <a href="https://github.com/ChrisMorrisOrg/ChrisMorris.org">
+          <li>
+            <article>
+              <header>
+              ChrisMorris.org
+              </header>
+              <footer>
+              January 3, 2013
+              </footer>
+            </article>
+          </li>
+        </a>
+        <a href="https://github.com/ChrisMorrisOrg/Pi-in-Py/">
+          <li>
+            <article>
+              <header>
+              Pi-in-Py
+              </header>
+              <footer>
+              January 2, 2013
+              </footer>
+            </article>
+          </li>
+        </a>
+      </ul>
