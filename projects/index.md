@@ -5,9 +5,5 @@ title: Projects
 status: publish
 type: post
 published: true
-meta:
-  _edit_last: '1'
-  pvc_views: '0'
-  views: '0'
 ---
-This page coming soon!
+A more detailed section is coming soon. In the meantime, you can checkout some of my projects on my [GitHub page](http://github.com/ChrisMorrisOrg).

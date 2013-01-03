@@ -5,9 +5,5 @@ title: Contact
 status: publish
 type: post
 published: true
-meta:
-  _edit_last: '1'
-  pvc_views: '0'
-  views: '0'
 ---
-This page coming soon!
+A contact form will be coming soon. In the mean time, you can contact me via [Twitter - @ChrisMorrisOrg](http://twitter.com/ChrisMorrisOrg)
