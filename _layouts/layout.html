@@ -108,7 +108,11 @@
           }
         });
 
-          document.getElementById("container").className = "active";
+        $('.box').load('http://chrismorris.org/quotes', function() {
+          $('.box').slideDown();
+        });
+
+        document.getElementById("container").className = "active";
 
 
       });
