@@ -52,7 +52,7 @@
             <li><a href="/contact/"><h1 class="green">Contact</h1></a></li>
           </ul>
         </nav>
-        <h1 class="default-static">Random Quote</h1>
+        <h1 class="default-static" id="getQuote">Random Quote</h1>
         <div class="box">
         “Ultimate automation … will make our modern industry as primitive and outdated as the stone age man looks to us today.”
         <span style="text-align: center; display: block;">~ Albert Einstein ~</span>
@@ -83,6 +83,15 @@
     <!--<script src="js/plugins.js"></script>-->
     <!--<script src="js/script.js"></script>-->
     <script type="application/javascript">
+
+        var getQuote = function(){
+          $('.box').load('http://chrismorris.org/quotes', function() {
+            $('.box').slideDown();
+          });
+        };
+
+      $('#getQuote').click(function(){getQuote()});
+
       /* window.onload = function(){document.getElementById("container").className = "active";};*/
       $(document).ready(function(){
 
@@ -108,9 +117,7 @@
           }
         });
 
-        $('.box').load('http://chrismorris.org/quotes', function() {
-          $('.box').slideDown();
-        });
+        getQuote();
 
         document.getElementById("container").className = "active";
 
