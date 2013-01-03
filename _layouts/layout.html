@@ -88,12 +88,13 @@
         $('.box').load('http://chrismorris.org/quotes');
       };
 
-      $('#getQuote').click(function(){
-        getQuote();
-      });
-
       /* window.onload = function(){document.getElementById("container").className = "active";};*/
       $(document).ready(function(){
+        $.ajaxSetup({cache:false});
+
+        $('#getQuote').click(function(){
+          getQuote();
+        });
 
         $('#sidebar').height($(document).height());
 
