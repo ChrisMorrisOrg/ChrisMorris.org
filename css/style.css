@@ -454,6 +454,10 @@ header.banner h2 {
 	content: ", ";
 }
 
+.quoteAuthor {
+	text-align: center; display: block;
+}
+
 
 /* ==|== media queries ======================================================
    EXAMPLE Media Query for Responsive Design.

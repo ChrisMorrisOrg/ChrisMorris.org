@@ -84,13 +84,13 @@
     <!--<script src="js/script.js"></script>-->
     <script type="application/javascript">
 
-        var getQuote = function(){
-          $('.box').load('http://chrismorris.org/quotes', function() {
-            $('.box').slideDown();
-          });
-        };
+      function getQuote(){
+        $('.box').load('http://chrismorris.org/quotes', function() {
+          $('.box').slideDown();
+        });
+      };
 
-      $('#getQuote').click(function(){getQuote()});
+      $('#getQuote').click(function(){getQuote();});
 
       /* window.onload = function(){document.getElementById("container").className = "active";};*/
       $(document).ready(function(){
