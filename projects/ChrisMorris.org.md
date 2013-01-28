@@ -8,7 +8,8 @@ status: publish
 type: page
 published: true
 comments: true
-projcet_title: 'ChrisMorris.org'
+project: true
+project_title: 'ChrisMorris.org'
 project_date: "January 3, 2013"
 ---
 ChrisMorris.org is the website you're on right now! It's simply my blog.

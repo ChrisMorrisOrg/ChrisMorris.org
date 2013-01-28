@@ -8,7 +8,8 @@ status: publish
 type: page
 published: true
 comments: true
-projcet_title: 'Pi-in-Py'
+project: true
+project_title: 'Pi-in-Py'
 project_date: "January 2, 2013"
 ---
 Py-in-Pi is a Python application intended to be run within Terminal. It's easy to setup and use, and gives some amazing visuals of how Pi is calculated using various different methods.

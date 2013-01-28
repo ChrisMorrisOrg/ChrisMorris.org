@@ -8,7 +8,8 @@ status: publish
 type: page
 published: true
 comments: true
-projcet_title: '5nake'
+project: true
+project_title: '5nake'
 project_date: "January 26, 2013"
 ---
 5nake is an HTML5 remake of the classic game made famous by Nokia, Snake.

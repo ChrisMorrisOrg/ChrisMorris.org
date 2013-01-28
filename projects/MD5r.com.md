@@ -8,7 +8,8 @@ status: publish
 type: page
 published: true
 comments: true
-projcet_title: 'MD5r.com'
+project: true
+project_title: 'MD5r.com'
 project_date: "January 21, 2013"
 ---
 MD5r is a simple PHP-MySQL application that allows you to hash strings using the MD5 message digest algorithm. These messages are then stored with their associated digest in a MySQL database (which acts as a rainbow table), allowing you to revert hashes back into their original form should the database store the relationship.
