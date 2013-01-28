@@ -81,21 +81,6 @@
     <!--<script src="js/plugins.js"></script>-->
     <!--<script src="js/script.js"></script>-->
     <script type="application/javascript">
-
-      function getQuote(){
-        $.ajax({
-          type: 'POST',
-          url: 'http://chrismorris.org/quotes',
-          dataType: 'json',
-          success: function(data) {
-            $('.box').text(data.quote + "<span class="quoteAuthor">~" + data.author + "~</span>");
-          },
-          error: function(data, textStatus, errorThrown) {
-            $('.box').text("“Doesn't it just suck when the quotes system fails?”<span class=\"quoteAuthor\">~ Chris Morris ~</span>");
-          }
-        });
-      };
-
       /* window.onload = function(){document.getElementById("container").className = "active";};*/
       $(document).ready(function(){
         $.ajaxSetup({cache:false});
@@ -125,6 +110,21 @@
             $('.views').removeClass('inactive').addClass('active');
           }
         });
+
+        function getQuote(){
+          $.ajax({
+            type: 'GET',
+            url: 'http://chrismorris.org/quotes',
+            dataType: 'json',
+            success: function(data) {
+              $('.box').html("“" + data.quote + "”" + "<span class=\"quoteAuthor\">~ " + data.author + " ~</span>");
+            },
+            error: function(data, textStatus, errorThrown) {
+              $('.box').html("“Doesn't it just suck when the quotes system fails?”" + "<span class=\"quoteAuthor\">~ Chris Morris ~</span>");
+            }
+          });
+        };
+
 
         getQuote();
 

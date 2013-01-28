@@ -5,6 +5,7 @@ title: Chris Morris - Scitechivity!
       <h1>Blog Posts</h1>
       <ul class="link-list">
         {% for post in site.posts %}
+        {% unless post.hidden %}
         <a href="{{ post.url }}/">
           <li>
             <article>
@@ -17,34 +18,26 @@ title: Chris Morris - Scitechivity!
             </article>
           </li>
         </a>
+        {% endunless %}
         {% endfor %}
       </ul>
-  
-  
+
       <h1>Projects and Source Code</h1>
       <ul class="link-list">
-        <a href="https://github.com/ChrisMorrisOrg/ChrisMorris.org">
+        {% for page in site.pages %}
+        {% if page.project %}
+        <a href="{{ page.url }}">
           <li>
             <article>
               <header>
-              ChrisMorris.org
+                {{ page.title }}
               </header>
               <footer>
-              January 3, 2013
+                {{ page.project_date }}
               </footer>
             </article>
           </li>
         </a>
-        <a href="https://github.com/ChrisMorrisOrg/Pi-in-Py/">
-          <li>
-            <article>
-              <header>
-              Pi-in-Py
-              </header>
-              <footer>
-              January 2, 2013
-              </footer>
-            </article>
-          </li>
-        </a>
+        {% endif %}
+        {% endfor %}
       </ul>

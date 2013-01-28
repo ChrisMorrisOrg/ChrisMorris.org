@@ -6,31 +6,31 @@ body {
 }
 	
 header.banner {
-	background: rgba(68, 255, 0, 0.4);
+	background: rgba(68, 195, 0, 0.4);
 }
 
 header.banner h1:hover {
-	background: rgb(68, 255, 0);
+	background: rgb(68, 195, 0);
 }
 
 #sidebar {
-	background: rgba(68, 255, 0, 0.2);
+	background: rgba(68, 195, 0, 0.2);
 }
 
 #sidebar .sub a {
-	background: rgba(68, 255, 0, 0.4);
+	background: rgba(68, 195, 0, 0.4);
 }
 
 #sidebar .sub a:hover {
-	background: rgba(68, 255, 0, 1);
+	background: rgba(68, 195, 0, 1);
 }
 
 #content h1 {
-	color: rgb(68, 255, 0);
+	color: rgb(68, 195, 0);
 }
 
 #content .link-list li {
-	background: rgba(68, 255, 0, 0.2);
+	background: rgba(68, 195, 0, 0.2);
 }
 
 #content .link-list li:hover {
@@ -42,15 +42,15 @@ header.banner h1:hover {
 }
 
 #content .link-list li footer {
-	background: rgba(68, 255, 0, 0.2);
+	background: rgba(68, 195, 0, 0.2);
 }
 
-.default-static	{ background: rgba(68, 255, 0, 1); }
+.default-static	{ background: rgba(68, 195, 0, 1); }
 
 #content .post {
-        background: rgba(68, 255, 0, 0.2);
+        background: rgba(68, 195, 0, 0.2);
 }
 
 #content .post header {
-        background: rgba(68, 255, 0, 0.2);
+        background: rgba(68, 195, 0, 0.2);
 }
