@@ -330,19 +330,19 @@ header.banner h2 {
 .purple	{ background: rgba(144, 0, 255, 0.4); }
 .red	{ background: rgba(255, 17, 0, 0.4); }
 .orange	{ background: rgba(255, 102, 0, 0.4); }
-.green	{ background: rgba(68, 255, 0, 0.4); }
+.green	{ background: rgba(68, 195, 0, 0.4); }
 
 .blue-static, .blue:hover		{ background: rgba(0, 110, 255, 1); }
 .purple-static, .purple:hover	{ background: rgba(144, 0, 255, 1); }
 .red-static, .red:hover		{ background: rgba(255, 17, 0, 1); }
 .orange-static, .orange:hover	{ background: rgba(255, 102, 0, 1); }
-.green-static, .green:hover	{ background: rgba(68, 255, 0, 1); }
+.green-static, .green:hover	{ background: rgba(68, 195, 0, 1); }
 
 .blue-text-static		{ color: rgb(0, 110, 255); }
 .purple-text-static		{ color: rgb(144, 0, 255); }
 .red-text-static		{ color: rgb(255, 17, 0); }
 .orange-text-static		{ color: rgb(255, 102, 0); }
-.green-text-static		{ color: rgb(68, 255, 0); }
+.green-text-static		{ color: rgb(68, 195, 0); }
 
 #content {
 	padding: 0;
