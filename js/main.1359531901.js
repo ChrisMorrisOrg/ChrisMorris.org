@@ -43,10 +43,6 @@ $(document).ready(function(){
     });
   };
 
-  $(window).bind('onbeforeunload', function() {
-    document.getElementById("container").className = "inactive";
-  });
-
   getQuote();
 
   document.getElementById("container").className = "active";
@@ -58,3 +54,5 @@ function resizeSidebar(){
   else
     $('#sidebar').height('auto');
 }
+
+window.onbeforeunload = function(){document.getElementById("container").className = "inactive";};
