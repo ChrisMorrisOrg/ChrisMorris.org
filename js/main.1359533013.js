@@ -49,8 +49,8 @@ $(document).ready(function(){
 });
   
 function resizeSidebar(){
-  if(($(window).width()/parseFloat($("body").css("font-size"))) > 39)
-    $('#sidebar').height($(window).height());
+  if(($(document).width()/parseFloat($("body").css("font-size"))) > 39)
+    $('#sidebar').height($(document).height());
   else
     $('#sidebar').height('auto');
 }
