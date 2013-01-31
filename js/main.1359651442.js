@@ -8,9 +8,9 @@ $(document).ready(function(){
   });
 
   resizeSidebar();
-  $(window).resize(function(){
-    resizeSidebar();
-  });
+//  $(window).resize(function(){
+//    resizeSidebar();
+//  });
 
   $.ajax({
     type: 'POST',
