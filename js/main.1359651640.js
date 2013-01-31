@@ -49,7 +49,7 @@ $(document).ready(function(){
 });
   
 function resizeSidebar(){
-  if(($(document).width()/parseFloat($("body").css("font-size"))) > 39)
+  if(($(document).width()/parseFloat($("body").css("font-size"))) > 48)
     $('#sidebar').height($(document).height());
   else
     $('#sidebar').height('auto');
