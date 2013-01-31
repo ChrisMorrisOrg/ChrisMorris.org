@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Pensioner Goes Gaga at The Tivoli's Final Show!'
+title: "Pensioner Goes Gaga at The Tivoli's Final Show!"
 tags:
 - comedy
 - video
