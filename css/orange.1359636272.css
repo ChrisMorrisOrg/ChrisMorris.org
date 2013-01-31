@@ -2,7 +2,7 @@
 ::selection { background: rgb(255, 145, 0); color: #fff; text-shadow: none; }
 
 body {
-	background: url(../img/bg-orange.png) fixed top center #3a2c23;
+	background: url(/img/bg-orange.gif) fixed top center #3a2c23;
 }
 	
 header.banner {

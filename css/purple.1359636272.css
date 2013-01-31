@@ -2,35 +2,35 @@
 ::selection { background: rgb(255, 145, 0); color: #fff; text-shadow: none; }
 
 body {
-	background: url(../img/bg-red.png) fixed top center #3a2326;
+	background: url(/img/bg-purple.gif) fixed top center #30233a;
 }
 	
 header.banner {
-	background: rgba(255, 17, 0, 0.4);
+	background: rgba(144, 0, 255, 0.4);
 }
 
 header.banner h1:hover {
-	background: rgb(255, 17, 0);
+	background: rgb(144, 0, 255);
 }
 
 #sidebar {
-	background: rgba(255, 17, 0, 0.2);
+	background: rgba(144, 0, 255, 0.2);
 }
 
 #sidebar .sub a {
-	background: rgba(255, 17, 0, 0.4);
+	background: rgba(144, 0, 255, 0.4);
 }
 
 #sidebar .sub a:hover {
-	background: rgba(255, 17, 0, 1);
+	background: rgba(144, 0, 255, 1);
 }
 
 #content h1 {
-	color: rgb(255, 17, 0);
+	color: rgb(144, 0, 255);
 }
 
 #content .link-list li {
-	background: rgba(255, 17, 0, 0.2);
+	background: rgba(144, 0, 255, 0.2);
 }
 
 #content .link-list li:hover {
@@ -42,15 +42,15 @@ header.banner h1:hover {
 }
 
 #content .link-list li footer {
-	background: rgba(255, 17, 0, 0.2);
+	background: rgba(144, 0, 255, 0.2);
 }
 
-.default-static		{ background: rgba(255, 17, 0, 1); }
+.default-static	{ background: rgba(144, 0, 255, 1); }
 
 #content .post {
-        background: rgba(255, 17, 0, 0.2);
+        background: rgba(144, 0, 255, 0.2);
 }
 
 #content .post header {
-        background: rgba(255, 17, 0, 0.2);
+        background: rgba(144, 0, 255, 0.2);
 }
