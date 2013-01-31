@@ -14,6 +14,7 @@ comments: true
 Because jQuery allows you to write such minuscule amounts of code, I rarely need to debug nor optimise the small scripts that I make. Today, however, I decided that the project I was working on was at the stage that I really should take a look behind the scenes to see what I could optimise. Nothing was actually wrong with how the script worked or anything, I was really just interested to see if I could make any improvements.
 
 Anyway, this project I was working on had an &lt;input&gt; tag for the user to type into. I noticed, though, as I typed in the input box, my JavaScript console kept throwing this weird warning:
+
     event.layerX and event.layerY are broken and deprecated in WebKit. They will be removed from the engine in the near future.
 
 Well that's weird!
