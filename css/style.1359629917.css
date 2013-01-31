@@ -396,6 +396,7 @@ header.banner h2 {
 	font-weight: 600;
 	min-width: 8em;
 	color: rgba(255, 255, 255, 0.5);
+	vertical-align: middle;
 }
 
 #content .link-list li footer {
