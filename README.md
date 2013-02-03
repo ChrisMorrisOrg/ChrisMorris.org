@@ -1,6 +1,6 @@
 # [ChrisMorris.org](http://chrismorris.org) - Scitechivity
 
-Copyright (c) 2012 Chris Morris
+Copyright (c) 2012-2013 Chris Morris
 
 Overview
 --------
@@ -16,10 +16,10 @@ As of January 3rd, 2013: The design is currently incomplete, and there will be m
 
 At present I would appreciate it if you create your own design should you fork this repository, simply because I am branding my work with the current design. Thank you!
 
-There are several differnt colour schemes with the current design. Any post can be assigned a theme by adding "colour: <colour>", the default is blue.
+There are several differnt colour schemes with the current design. Any post can be assigned a theme by adding "colour: <colour>" to the YAML front matter, the default is blue.
 
-Deploying
----------
+Deployment
+----------
 Instructions and resources coming soon.
 
 Background
