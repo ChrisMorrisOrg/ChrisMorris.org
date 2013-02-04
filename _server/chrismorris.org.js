@@ -22,8 +22,17 @@ app.get('/quotes', function(req, res){
                 '{"author":"Neil deGrasse Tyson", "quote":"Actually, America is inching its way towards the metric system."}',
                 '{"author":"Stephen Colbert", "quote":"I tweet, therefore I am."}',
                 '{"author":"Karl Von Clausewitz", "quote":"War is a continuation of politics by other means. Politics is a continuation of economics by other means."}',
-                '{"author":"Adolf Hitler", "quote":"Let me control the textbooks and I will control the state."}',
-                '{"author":"Thomas Jefferson", "quote":"When the people fear the government there is tyranny, when the government fears the people there is liberty."}'
+                '{"author":"Adolf Hitler", "quote":"Let me control the textbooks and I will control the state."}' /* This quote is negative, but it's true. */,
+                '{"author":"Thomas Jefferson", "quote":"When the people fear the government there is tyranny, when the government fears the people there is liberty."}',
+                '{"author":"Ayn Rand", "quote":"A creative man is motivated by the desire to achieve, not by the desire to beat others."}',
+                '{"author":"Winston Churchill", "quote":"If you're going through hell, keep going."}',
+                '{"author":"Og Mandino", "quote":"Always do your best. What you plant now, you will harvest later."}',
+                '{"author":"Walt Disney", "quote":"If you can dream it, you can do it."}',
+                '{"author":"Thomas Edison", "quote":"Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time."}',
+                '{"author":"Ken Venturi", "quote":"I don't believe you have to be better than everybody else. I believe you have to be better than you ever thought you could be."}',
+                '{"author":"Albert Einstein", "quote":"When you are courting a nice girl an hour seems like a second. When you sit on a red-hot cinder a second seems like an hour. That's relativity."}',
+                '{"author":"Elbert Hubbard", "quote":"Do not take life too seriously. You will never get out of it alive."}',
+                '{"author":"Isaac Asimov", "quote":"People who think they know everything are a great annoyance to those of us who do."}'
 		];
   var chosenQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
