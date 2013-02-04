@@ -12,7 +12,7 @@ $(document).ready(function(){
 //    resizeSidebar();
 //  });
 
-  if(slug.length > 0){
+  if(slug){
     $.ajax({
       type: 'POST',
       url: 'http://chrismorris.org/views',
