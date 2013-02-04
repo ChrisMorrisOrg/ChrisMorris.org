@@ -14,8 +14,13 @@
 /* =============================================================================
    HTML5 display definitions
    ========================================================================== */
-a, h1, li, header, footer, .active, .inactive {
-	-webkit-transition: all 0.2s ease-in-out;
+article a, article h1, li, li h1, li a, article header, article footer {
+    -webkit-transition: background 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+
+header.banner, header.banner a, header.banner h1, header.banner h2 {
+    -webkit-transition: background 0.2s ease-in-out;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
