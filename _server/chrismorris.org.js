@@ -29,7 +29,7 @@ app.get('/quotes', function(req, res){
                 '{"author":"Og Mandino", "quote":"Always do your best. What you plant now, you will harvest later."}',
                 '{"author":"Walt Disney", "quote":"If you can dream it, you can do it."}',
                 '{"author":"Thomas Edison", "quote":"Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time."}',
-                '{"author":"Ken Venturi", "quote":"I don't believe you have to be better than everybody else. I believe you have to be better than you ever thought you could be."}',
+                '{"author":"Ken Venturi", "quote":"I don\'t believe you have to be better than everybody else. I believe you have to be better than you ever thought you could be."}',
                 '{"author":"Albert Einstein", "quote":"When you are courting a nice girl an hour seems like a second. When you sit on a red-hot cinder a second seems like an hour. That's relativity."}',
                 '{"author":"Elbert Hubbard", "quote":"Do not take life too seriously. You will never get out of it alive."}',
                 '{"author":"Isaac Asimov", "quote":"People who think they know everything are a great annoyance to those of us who do."}',
