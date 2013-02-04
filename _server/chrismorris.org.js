@@ -32,7 +32,8 @@ app.get('/quotes', function(req, res){
                 '{"author":"Ken Venturi", "quote":"I don't believe you have to be better than everybody else. I believe you have to be better than you ever thought you could be."}',
                 '{"author":"Albert Einstein", "quote":"When you are courting a nice girl an hour seems like a second. When you sit on a red-hot cinder a second seems like an hour. That's relativity."}',
                 '{"author":"Elbert Hubbard", "quote":"Do not take life too seriously. You will never get out of it alive."}',
-                '{"author":"Isaac Asimov", "quote":"People who think they know everything are a great annoyance to those of us who do."}'
+                '{"author":"Isaac Asimov", "quote":"People who think they know everything are a great annoyance to those of us who do."}',
+                '{"author":"Helen Keller", "quote":"Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence."}'
 		];
   var chosenQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
