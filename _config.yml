@@ -1,2 +1,2 @@
-exclude: [config.rb, nginx.conf, Rakefile, README.md, log]
+exclude: [config.rb, nginx.conf, Rakefile, README.md, log, "js/*", "css/*"]
 permalink: /:title
