@@ -23,9 +23,7 @@ title: Chris Morris - Scitechivity!
       </ul>
 
       <h1>Projects and Source Code</h1>
-      <ul class="link-list">
-        {% for page in site.pages %}
-        {% if page.project %}
+      <ul class="link-list">{% for page in site.pages %}{% if page.project %}
         <a href="{{ page.url }}">
           <li>
             <article>
@@ -37,7 +35,5 @@ title: Chris Morris - Scitechivity!
               </footer>
             </article>
           </li>
-        </a>
-        {% endif %}
-        {% endfor %}
+        </a>{% endif %}{% endfor %}
       </ul>
