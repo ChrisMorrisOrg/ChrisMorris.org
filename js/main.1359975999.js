@@ -12,22 +12,24 @@ $(document).ready(function(){
 //    resizeSidebar();
 //  });
 
-  $.ajax({
-    type: 'POST',
-    url: 'http://chrismorris.org/views',
-    data: {
-      slug: slug
-    },
-    dataType: 'json',
-    success: function(data) {
-      $('.views').text(data.views + " views");
-      $('.views').removeClass('inactive').addClass('active');
-    },
-    error: function(data, textStatus, errorThrown) {
-      $('.views').text("ERR");
-      $('.views').removeClass('inactive').addClass('active');
-    }
-  });
+  if(slug.length > 0){
+    $.ajax({
+      type: 'POST',
+      url: 'http://chrismorris.org/views',
+      data: {
+        slug: slug
+      },
+      dataType: 'json',
+      success: function(data) {
+        $('.views').text(data.views + " views");
+        $('.views').removeClass('inactive').addClass('active');
+      },
+      error: function(data, textStatus, errorThrown) {
+        $('.views').text("ERR");
+        $('.views').removeClass('inactive').addClass('active');
+      }
+    });
+  }
 
   function getQuote(){
     $.ajax({
@@ -44,8 +46,6 @@ $(document).ready(function(){
   };
 
   getQuote();
-
-//  document.getElementById("container").className = "active";
 });
   
 function resizeSidebar(){
@@ -54,5 +54,3 @@ function resizeSidebar(){
   else
     $('#sidebar').height('auto');
 }
-
-// window.onbeforeunload = function(){document.getElementById("container").className = "inactive";};
