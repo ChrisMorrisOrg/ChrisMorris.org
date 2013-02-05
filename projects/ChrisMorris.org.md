@@ -1,5 +1,6 @@
 ---
 layout: post
+colour: purple
 title: 'ChrisMorris.org - A Jekyll-Powered Blog'
 tags:
 - projects
@@ -14,4 +15,4 @@ project_date: "January 3, 2013"
 ---
 ChrisMorris.org is the website you're on right now! It's simply my blog.
 
-More information will be added to this page soon, in the meantime you can checkout the source at [GitHub](https://github.com/ChrisMorrisOrg/ChrisMorris.org).
+More information will be added to this page soon, in the meantime you can check out the source at [GitHub](https://github.com/ChrisMorrisOrg/ChrisMorris.org).

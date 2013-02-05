@@ -1,5 +1,6 @@
 ---
 layout: post
+colour: purple
 title: 'Pi-in-Py - Visualise the Different Methods of Calculating Pi'
 tags:
 - projects
