@@ -1,9 +1,21 @@
 ---
-layout: post
+layout: layout
 colour: purple
 title: Projects
-status: publish
-type: post
-published: true
 ---
-A more detailed section is coming soon. In the meantime, you can checkout some of my projects on my <a href="https://github.com/ChrisMorrisOrg">GitHub page</a>.
+
+       <h1>Projects and Source Code</h1>
+       <ul class="link-list">{% for page in site.pages %}{% if page.project %}
+         <a href="{{ page.url }}">
+           <li>
+             <article>
+               <header>
+                 {{ page.title }}
+               </header>
+               <footer>
+                 {{ page.project_date }}
+               </footer>
+             </article>
+           </li>
+         </a>{% endif %}{% endfor %}
+       </ul>
