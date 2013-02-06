@@ -327,7 +327,7 @@ header.banner h2 {
 }
 
 #sidebar .sub a {
-	margin: 0 0 0.1875em 0.625em;
+	margin: 0 0.9375em 0.1875em 0.625em;
 	padding: 0.3125em 0.625em;
 	display: block;
 }
@@ -492,11 +492,12 @@ header.banner h2 {
 @media only screen and (max-width: 48em) {
   /* Style adjustments for viewports that meet the condition */
 #sidebar {
-	padding: 1.25em 0 0 0;
-	float: none;
-	width: 100%;
-	position: relative;
-	right: auto;
+    padding: 0 0 0 0;
+    margin: -5.625em 0.625em 0 0;
+    float: none;
+    width: 100%;
+    position: relative;
+    right: auto;
     max-height: 41em;
 }
 #sidebar #offset {
