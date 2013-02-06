@@ -1,7 +1,7 @@
 ---
 layout: post
 colour: purple
-title: 'Base64 - Generate base64 image data URL\'s'
+title: "Base64 - Generate base64 image data URL's"
 tags:
 - projects
 - source
