@@ -6,8 +6,8 @@ title: Chris Morris - Scitechivity!
       <ul class="link-list">
         {% for post in site.posts %}
         {% unless post.hidden %}
-        <a href="{{ post.url }}/">
-          <li>
+        <li>
+          <a href="{{ post.url }}/">
             <article>
               <header>
               {{ post.title }}
@@ -16,16 +16,16 @@ title: Chris Morris - Scitechivity!
               {{ post.date | date: "%B %e, %Y" }}
               </footer>
             </article>
-          </li>
-        </a>
+          </a>
+        </li>
         {% endunless %}
         {% endfor %}
       </ul>
 
       <h1>Projects and Source Code</h1>
       <ul class="link-list">{% for page in site.pages %}{% if page.project %}
-        <a href="{{ page.url }}">
-          <li>
+        <li>
+          <a href="{{ page.url }}">
             <article>
               <header>
                 {{ page.title }}
@@ -34,6 +34,6 @@ title: Chris Morris - Scitechivity!
                 {{ page.project_date }}
               </footer>
             </article>
-          </li>
-        </a>{% endif %}{% endfor %}
+          </a>
+        </li>{% endif %}{% endfor %}
       </ul>

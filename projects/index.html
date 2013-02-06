@@ -6,8 +6,8 @@ title: Projects
 
        <h1>Projects and Source Code</h1>
        <ul class="link-list">{% for page in site.pages %}{% if page.project %}
-         <a href="{{ page.url }}">
-           <li>
+         <li>
+           <a href="{{ page.url }}">
              <article>
                <header>
                  {{ page.title }}
@@ -16,6 +16,6 @@ title: Projects
                  {{ page.project_date }}
                </footer>
              </article>
-           </li>
-         </a>{% endif %}{% endfor %}
+           </a>
+         </li>{% endif %}{% endfor %}
        </ul>
