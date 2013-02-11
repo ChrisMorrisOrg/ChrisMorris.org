@@ -34,11 +34,11 @@ header.banner h1:hover {
 }
 
 #content .link-list li:hover {
-	background: rgba(255, 145, 0, 0.2);
+	background: rgba(68, 195, 0, 0.2);
 }
 
 #content .link-list li:hover footer {
-	background: rgba(255, 145, 0, 0.2);
+	background: rgba(68, 195, 0, 0.2);
 }
 
 #content .link-list li footer {
