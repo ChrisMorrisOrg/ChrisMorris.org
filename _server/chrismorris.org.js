@@ -33,7 +33,8 @@ app.get('/quotes', function(req, res){
                 '{"author":"Albert Einstein", "quote":"When you are courting a nice girl an hour seems like a second. When you sit on a red-hot cinder a second seems like an hour. That\'s relativity."}',
                 '{"author":"Elbert Hubbard", "quote":"Do not take life too seriously. You will never get out of it alive."}',
                 '{"author":"Isaac Asimov", "quote":"People who think they know everything are a great annoyance to those of us who do."}',
-                '{"author":"Helen Keller", "quote":"Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence."}'
+                '{"author":"Helen Keller", "quote":"Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence."}',
+                '{"author":"Theodore Roosevelt", "quote":"Far better is it to dare mighty things, to win glorius triumphs, even though checkered by failure... than to rank with those poor spirits who neither enjoy nor suffer much, because they live in a gray twilight that knows not victory nor defeat."}'
 		];
   var chosenQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
