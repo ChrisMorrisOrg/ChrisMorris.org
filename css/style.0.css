@@ -240,7 +240,7 @@ body {
 	margin: 0;
 	cursor: default;
 }
-	
+
 a {
 	cursor: pointer;
 }
@@ -251,7 +251,7 @@ header {
 }
 
 header.banner {
-	font-family: "Impact";
+	font-family: "Oswald";
 	height: 5em;
 	width: 100%;
 	text-transform: uppercase;
@@ -300,7 +300,7 @@ header.banner h2 {
 #sidebar h1 {
 	display: block;
 	font-size: 1.5em;
-	font-family: "Impact";
+	font-family: "Oswald";
 	text-transform: uppercase;
 	padding: 0.09375em 0.625em;
 	text-decoration: none;
@@ -365,7 +365,7 @@ header.banner h2 {
 	margin: 0.66em 0 0.3125em 0.625em;
 	padding: 0;
 	font-size: 2em;
-	font-family: "Impact";
+	font-family: "Oswald";
 	text-transform: uppercase;
 }
 
