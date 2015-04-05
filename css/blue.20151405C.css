@@ -45,8 +45,6 @@ header.banner h1:hover {
 	background: rgba(0, 110, 255, 0.2);
 }
 
-.default-static	{ background: rgba(0, 110, 255, 1); }
-
 #content .post {
 	background: rgba(0, 110, 255, 0.2);
 }
