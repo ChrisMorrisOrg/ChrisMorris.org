@@ -233,7 +233,26 @@ td { vertical-align: top; }
 
 
 
+html, body {
+  position: relative;
+  min-height: 100%;
+}
 
+#container {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+#containment {
+  position: relative;
+  max-width: 80em;
+  min-height: 100%;
+  bottom: 0;
+  margin: 0 auto;
+}
 
 body {
 	padding: 0;
@@ -245,6 +264,16 @@ a {
 	cursor: pointer;
 }
 
+div.bannerunderlay {
+  display: block;
+	margin: 1.875em 0 0 0;
+  font-family: "Oswald";
+	height: 5em;
+	width: 100%;
+  position: relative;
+	text-transform: uppercase;
+}
+
 header {
 	display: block;
 	margin: 1.875em 0 0 0;
@@ -254,6 +283,8 @@ header.banner {
 	font-family: "Oswald";
 	height: 5em;
 	width: 100%;
+  position: absolute;
+  top: -8.2em;
 	text-transform: uppercase;
 }
 
@@ -263,8 +294,9 @@ header.banner a {
 }
 
 header.banner h1 {
-	font-size: 2.875em;
-	padding: 0.175em 0.42478em;
+	font-size: 2.8em;
+  padding: 0em 0.42478em 0;
+  line-height: 1.8em;
 	float: left;
 	margin: 0;
 }
@@ -286,7 +318,8 @@ header.banner h2 {
 	margin: -6.875em 0.625em 0 0;
 	position: absolute;
 	right: 0;
-	top: 6.875em;
+	top: -1.3em;
+  min-height: 100%;
 }
 
 #sidebar #offset {
@@ -294,7 +327,8 @@ header.banner h2 {
 }
 
 #sidebar .box {
-	padding: 0.5em 1.625em 1em 1.3125em;
+	padding: 0em 1.625em 0.5em 1.3125em;
+  text-align: justify;
 }
 
 #sidebar h1 {
@@ -306,6 +340,18 @@ header.banner h2 {
 	text-decoration: none;
 	margin: 0 0 0.3125em 0;
 	color: #fff;
+}
+
+#sidebar h1.default-static {
+	display: block;
+	font-size: 1.5em;
+	font-family: "Oswald";
+	text-transform: uppercase;
+	padding: 0.09375em 0.625em;
+	text-decoration: none;
+	margin: 0.625em 0.41667em 0.15625em 0.20833em;
+  text-align: center;
+	color: rgb(0, 110, 255);
 }
 
 #sidebar a {
@@ -493,16 +539,33 @@ header.banner h2 {
    Modify as content requires.
    ========================================================================== */
 
+@media only screen and (min-width: 96em) {
+  .adapter {
+    width: 50%;
+    display: block;
+    float: left;
+    padding: 0 0 0 0.75em;
+    box-sizing: border-box;
+  }
+}
+
+
+@media only screen and (max-width: 40em) {
+#content .link-list li footer {
+	display: none;
+}
+}
+
 @media only screen and (max-width: 48em) {
   /* Style adjustments for viewports that meet the condition */
 #sidebar {
     padding: 0 0 0 0;
-    margin: -5.625em 0.625em 0 0;
+    margin: 0 0.625em 0 0;
+    top: 0;
     float: none;
     width: 100%;
     position: relative;
     right: auto;
-    max-height: 41em;
 }
 #sidebar #offset {
 	margin: 0;
