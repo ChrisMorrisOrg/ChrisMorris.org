@@ -21,8 +21,8 @@
   <meta property="fb:admins" content="1721669711307072" />
   <meta property="fb:app_id" content="100004780085723" />
 
-  <link rel="stylesheet" href="/css/style.20151405D.css">
-  <link rel="stylesheet" href="/css/{% if page.colour %}{{ page.colour }}{% else %}blue{% endif %}.20151405D.css">
+  <link rel="stylesheet" href="/css/style.css?v=20151130">
+  <link rel="stylesheet" href="/css/{% if page.colour %}{{ page.colour }}{% else %}blue{% endif %}.css?v=20151130">
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -36,7 +36,7 @@
     <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
     <div class="clearfix bannerunderlay"></div>
 
-    <div id="containment">
+    <div id="containment"{% if page.type == "post" %} class="thin-containment"{% endif %}>
       <header class="clearfix banner">
         <a href="/"><h1>Chris Morris</h1></a>
         <h2>Scitechivity</h2>
@@ -52,7 +52,7 @@
             <ul>
               <li><a href="/"><h1 class="blue">Blog</h1></a></li>
               <li><a href="/projects/"><h1 class="purple">Projects</h1></a></li>
-              <li><a href="/resume/"><h1 class="red">Résumé</h1></a></li>
+              <li><a href="/gallery/"><h1 class="red">Photography &amp; Artwork</h1></a></li>
               <li><a href="/about/"><h1 class="orange">About</h1></a></li>
               <li><a href="/contact/"><h1 class="green">Contact</h1></a></li>
             </ul>
@@ -81,7 +81,7 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <!--<script>window.jQuery || document.write('<script src="/js/libs/jquery-1.9.0.min.js"><\/script>')</script>-->
-<script src="/js/main.0.js" type="text/javascript"></script>
+<script src="/js/main.js?v=20151130" type="text/javascript"></script>
 
 <!-- Plugins -->
   <!-- Google Analytics -->

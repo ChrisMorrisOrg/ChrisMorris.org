@@ -78,7 +78,7 @@ a:hover, a:active { outline: 0; }
 
 abbr[title] { border-bottom: 1px dotted; }
 
-b, strong { font-weight: bold; }
+b, strong { font-weight: 600; }
 
 blockquote { margin: 1em 40px; }
 
@@ -252,6 +252,10 @@ html, body {
   min-height: 100%;
   bottom: 0;
   margin: 0 auto;
+}
+
+.thin-containment {
+  max-width: 70em;
 }
 
 body {
@@ -461,7 +465,7 @@ header.banner h2 {
 	display: table-cell;
 	width: 9.5em;
 	text-align: center;
-	font-weight: 200;
+	font-weight: 300;
 	color: rgba(255, 255, 255, 0.5);
 	vertical-align: middle;
 }
@@ -497,7 +501,7 @@ header.banner h2 {
 	margin: 0 0 0 0;
 	width: auto;
 	display: block;
-	font-weight: 200;
+	font-weight: 300;
 	color: #FFF;
 }
 
