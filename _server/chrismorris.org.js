@@ -34,7 +34,11 @@ app.get('/quotes', function(req, res){
                 '{"author":"Elbert Hubbard", "quote":"Do not take life too seriously. You will never get out of it alive."}',
                 '{"author":"Isaac Asimov", "quote":"People who think they know everything are a great annoyance to those of us who do."}',
                 '{"author":"Helen Keller", "quote":"Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence."}',
-                '{"author":"Theodore Roosevelt", "quote":"Far better is it to dare mighty things, to win glorius triumphs, even though checkered by failure... than to rank with those poor spirits who neither enjoy nor suffer much, because they live in a gray twilight that knows not victory nor defeat."}'
+                '{"author":"Theodore Roosevelt", "quote":"Far better is it to dare mighty things, to win glorius triumphs, even though checkered by failure... than to rank with those poor spirits who neither enjoy nor suffer much, because they live in a gray twilight that knows not victory nor defeat."}',
+                '{"author":"Roy H. Williams", "quote":"A smart man makes a mistake, learns from it, and never makes that mistake again. But a wise man finds a smart man and learns from him how to avoid the mistake altogether."}',
+                '{"author":"Albert Einstein", "quote":"The difference between stupidity and genius is that genius has its limits."}',
+                '{"author":"Steve Jobs", "quote":"Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma - which is living with the results of other people’s thinking. Don’t let the noise of others’ opinions drown out your own inner voice. And most important, have the courage to follow your heart and intuition."}',
+                '{"author":"Arthur C. Clarke", "quote":"Any sufficiently advanced technology is indistinguishable from magic."}'
 		];
   var chosenQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
@@ -63,7 +67,7 @@ app.post('/views', function(req, res){
     res.setHeader('Content-Type', 'application/json');
     res.send(rows[0]);
   });
-    
+
   // Update views
   connection.query('UPDATE views SET views = views+1 WHERE url = ?', [slug], function(err, rows, fields) {});
 
