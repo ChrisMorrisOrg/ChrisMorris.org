@@ -1,2 +1,2 @@
-exclude: [config.rb, nginx.conf, Rakefile, README.md, log, node_modules]
-permalink: /:title
+exclude: [config.rb, nginx.conf, Rakefile, README.md, log, "*.log", node_modules]
+permalink: :title/
