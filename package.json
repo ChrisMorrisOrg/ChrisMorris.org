@@ -2,11 +2,27 @@
   "name": "ChrisMorris.org",
   "description": "Scitechivity! Science. Technology. Creativity. (My Jekyll-powered blog.)",
   "author": "Chris Morris <chris@chrismorris.org>",
-  "version": "1.2.1",
+  "version": "1.3.0",
+  "homepage": "http://chrismorris.org",
   "private": true,
+  "main": "chrismorris.org.js",
   "dependencies": {
-    "express": ">= 3.1.0",
-    "mysql": ">= 2.0.0-alpha5"
+    "express": "^4.13.3",
+    "mysql": ">= 2.0.0-alpha5",
+    "body-parser": "^1.14.2"
   },
-  "engine": "node 0.9.3"
+  "devDependencies": {
+    "stylus": "^0.53.0"
+  },
+  "scripts": {
+    "build": "npm run build-blog && npm run build-css",
+    "build-blog": "jekyll build",
+    "build-css": "stylus css/*.styl -o css/ -c",
+    "push": "rm -rf _site && npm run build && rsync -a -v -e ssh --delete _site nginx.conf _server node_modules supervisor.conf chris@xenon:/home/chris/www/chrismorris.org/",
+    "start": "npm run build && jekyll serve --port 3013",
+    "watch": "npm run watch-blog",
+    "watch-blog": "jekyll serve --watch --port 3013",
+    "watch-css": "stylus css/*.styl -o css/ -w"
+  },
+  "engine": "node 5.2.0"
 }

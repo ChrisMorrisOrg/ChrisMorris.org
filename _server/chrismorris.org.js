@@ -1,8 +1,15 @@
 var express	= require('express');
-var app		= express();
+var bodyParser = require('body-parser');
+var app	= express();
 
-app.use(express.bodyParser());
+app.use(bodyParser.urlencoded({ extended: false }));
 
+var port = process.argv[2]
+
+if (!port) {
+  port = 3013
+}
+console.log ('Using port ' + port)
 
 app.get('/quotes', function(req, res){
   var quotes = ['{"author":"Albert Einstein", "quote":"Ultimate automation … will make our modern industry as primitive and outdated as the stone age man looks to us today."}',
@@ -77,4 +84,4 @@ app.post('/views', function(req, res){
 });
 
 
-app.listen(3000);
+app.listen(port);

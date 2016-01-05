@@ -6,7 +6,7 @@ $(document).ready(function(){
   if(slug){
     $.ajax({
       type: 'POST',
-      url: 'http://chrismorris.org/views',
+      url: '/views',
       data: {
         slug: slug
       },
@@ -25,7 +25,7 @@ $(document).ready(function(){
   function getQuote(){
     $.ajax({
       type: 'GET',
-      url: 'http://chrismorris.org/quotes',
+      url: '/quotes',
       dataType: 'json',
       success: function(data) {
         $('.box').html("“" + data.quote + "”" + "<span class=\"quoteAuthor\">~ " + data.author + " ~</span>");
@@ -35,7 +35,8 @@ $(document).ready(function(){
       }
     });
   };
-  
+
+  // TODO: Implement CSS flexbox
   function resizeSidebar(){
     if(($(document).width()/parseFloat($("body").css("font-size"))) > 48)
       $('#sidebar').height($(document).height());
