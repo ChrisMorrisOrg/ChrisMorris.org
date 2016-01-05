@@ -58,12 +58,8 @@ app.post('/views', function(req, res){
 
   var slug		= (req.body.slug).replace(/^\/|\/$/g, ''); // Strip leading and trailing slashes
   var mysql		= require('mysql');
-  var connection	= mysql.createConnection({
-    host            : 'localhost',
-    user            : 'USERNAME',
-    password        : 'PASSWORD',
-    database        : 'chrismorrisorg',
-  });
+  var mysqlConfig = require('./mysql-config');
+  var connection	= mysql.createConnection(mysqlConfig.db);
 
   connection.connect();
 

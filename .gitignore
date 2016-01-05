@@ -2,3 +2,4 @@ node_modules
 css/*.css
 *.log
 _site
+mysql-config.js
