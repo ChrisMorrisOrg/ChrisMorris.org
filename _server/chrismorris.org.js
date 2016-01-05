@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 var port = process.argv[2]
 
 if (!port) {
-  port = 3013
+  port = 3000
 }
 console.log ('Using port ' + port)
 
