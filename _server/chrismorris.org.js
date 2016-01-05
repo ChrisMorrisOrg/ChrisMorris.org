@@ -56,7 +56,7 @@ app.get('/quotes', function(req, res){
 
 app.post('/views', function(req, res){
 
-  var slug		= (req.body.slug).replace('/', '');
+  var slug		= (req.body.slug).replace(/^\/|\/$/g, ''); // Strip leading and trailing slashes
   var mysql		= require('mysql');
   var connection	= mysql.createConnection({
     host            : 'localhost',
@@ -69,7 +69,7 @@ app.post('/views', function(req, res){
 
   // Return the number of views for a given URL
   connection.query('SELECT FORMAT(views+1, 0) AS views FROM views WHERE url = ?', [slug], function(err, rows, fields) {
-    console.log("POST: View incremented on slug = '" + slug + "', views now = " + rows[0]);
+    console.log("POST: View incremented on slug = '" + slug + "', views now = " + rows[0]['views']);
 
     res.setHeader('Content-Type', 'application/json');
     res.send(rows[0]);
