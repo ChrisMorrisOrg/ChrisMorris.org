@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: page
 colour: red
 title: Not Found
 status: publish
-type: post
+type: page
 published: true
 ---
 Well this is annoying! I've looked high and low for what you're looking for and can't find it anywhere!

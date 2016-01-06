@@ -1,33 +1,16 @@
 ---
 layout: layout
-class: post
+class: page
 ---
 
 <h1>{{ page.title }}</h1>
 
 <div class="post">
-
-  <header>
-    {% if page.date %}<time datetime="{{page.date | date: "%Y-%m-%d"}}">{{ page.date | date: "%B %e, %Y" }}</time>{% endif %}
-    {% if page.tags %}Tags:
-    <ul>
-      {% for tag in page.tags %}<li><a href="/tag/{{ tag }}/">{{ tag | replace: '-', ' ' }}</a></li>
-      {% endfor %}
-    </ul>{% endif %}
-    <span class="views inactive" data-slug="{{ page.url }}"></span>
-  </header>
-
+  
   <article>
     {{ content }}
   </article>
-  
-  <!-- <section id="share">
-    <span class='st_facebook_large' displayText='Facebook'></span>
-    <span class='st_twitter_large' displayText='Tweet'></span>
-    <span class='st_linkedin_large' displayText='LinkedIn'></span>
-    <span class='st_email_large' displayText='Email'></span>
-    <span class='st_sharethis_large' displayText='ShareThis'></span>
-  </section> -->
+
 </div>
 
 {% if page.comments %}
