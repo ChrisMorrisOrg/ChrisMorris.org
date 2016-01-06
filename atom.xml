@@ -1,5 +1,5 @@
 ---
-layout: nil
+layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
@@ -16,8 +16,8 @@ layout: nil
     <name>Chris Morris</name>
     <uri>http://chrismorris.org</uri>
   </author>
-  
-  {% for post in site.posts %}
+
+  {% for post in site.posts limit: 20 %}
   {% unless post.hidden %}
   <entry>
     <title>{{ post.title | xml_escape }}</title>
@@ -25,11 +25,11 @@ layout: nil
       <name>Chris Morris</name>
       <uri>http://chrismorris.org</uri>
     </author>
-    <link rel="alternate" type="text/html" href="http://chrismorris.org{{ post.url }}/"/>
+    <link rel="alternate" type="text/html" href="http://chrismorris.org{{ post.url }}"/>
     <id>http://chrismorris.org{{ post.id }}</id>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <summary type="html"><![CDATA[{{ post.content | strip_html | truncatewords: 55 }}]]></summary>
-    <content type="html" xml:base="http://chrismorris.org{{ post.url }}/"><![CDATA[{{ post.content }}]]></content>
+    <content type="html" xml:base="http://chrismorris.org{{ post.url }}"><![CDATA[{{ post.content }}]]></content>
   </entry>
   {% endunless  %}
   {% endfor %}
