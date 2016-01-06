@@ -29,7 +29,6 @@ app.get('/quotes', function(req, res){
                 '{"author":"Neil deGrasse Tyson", "quote":"Actually, America is inching its way towards the metric system."}',
                 '{"author":"Stephen Colbert", "quote":"I tweet, therefore I am."}',
                 '{"author":"Karl Von Clausewitz", "quote":"War is a continuation of politics by other means. Politics is a continuation of economics by other means."}',
-                '{"author":"Adolf Hitler", "quote":"Let me control the textbooks and I will control the state."}' /* This quote is negative, but it's true. */,
                 '{"author":"Thomas Jefferson", "quote":"When the people fear the government there is tyranny, when the government fears the people there is liberty."}',
                 '{"author":"Ayn Rand", "quote":"A creative man is motivated by the desire to achieve, not by the desire to beat others."}',
                 '{"author":"Winston Churchill", "quote":"If you\'re going through hell, keep going."}',
