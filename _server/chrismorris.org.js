@@ -22,6 +22,20 @@ app.post('/views', function(req, res){
 
   // Return the number of views for a given URL
   connection.query('SELECT FORMAT(views+1, 0) AS views FROM views WHERE url = ?', [slug], function(err, rows, fields) {
+    if (err) {
+      console.error(err.message)
+    } else if (results.affectedRows === 0) {
+      // Insert a new record if none exists
+      connection.query('INSERT INTO views (slug, views) VALUES (?, ?)', [slug, 0], function (err, results) {
+        if (err)
+          console.error(err.message)
+        else if (results.affectedRows !== 1)
+          console.error('ERROR: Inserting new slug failed')
+        else
+          console.error('Added new slug ' + slug)
+      });
+    }
+
     console.log("POST: View incremented on slug = '" + slug + "', views now = " + rows[0]['views']);
 
     res.setHeader('Content-Type', 'application/json');
