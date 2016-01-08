@@ -16,8 +16,6 @@ $(document).ready(function(){
         $('.views').removeClass('inactive').addClass('active');
       },
       error: function(data, textStatus, errorThrown) {
-        $('.views').text("ERR");
-        $('.views').removeClass('inactive').addClass('active');
       }
     });
   }
@@ -36,20 +34,9 @@ $(document).ready(function(){
     });
   };
 
-  // TODO: Implement CSS flexbox
-  function resizeSidebar(){
-    if(($(document).width()/parseFloat($("body").css("font-size"))) > 48)
-      $('#sidebar').height($(document).height());
-    else
-      $('#sidebar').height('auto');
-  }
-
-
   $('#getQuote').click(function(){
     getQuote();
   });
 
-
-  resizeSidebar();
   getQuote();
 });
