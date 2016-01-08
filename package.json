@@ -7,9 +7,9 @@
   "private": true,
   "main": "chrismorris.org.js",
   "dependencies": {
+    "body-parser": "^1.14.2",
     "express": "^4.13.3",
-    "mysql": ">= 2.0.0-alpha5",
-    "body-parser": "^1.14.2"
+    "mysql": ">= 2.0.0-alpha5"
   },
   "devDependencies": {
     "stylus": "^0.53.0"

@@ -24,6 +24,7 @@
   <meta property="fb:app_id" content="100004780085723" />
 
   <link rel="stylesheet" href="/css/{% if page.colour %}{{ page.colour }}{% else %}blue{% endif %}.css?v=20160105">
+  {% if page.gallery %}<link rel="stylesheet" href="/js/libs/lightbox2/lightbox.min.css">{% endif %}
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -81,7 +82,8 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <!--<script>window.jQuery || document.write('<script src="/js/libs/jquery-1.9.0.min.js"><\/script>')</script>-->
-<script src="/js/main.js?v=20151130A" type="text/javascript"></script>
+{% if page.gallery %}<script src="/js/libs/lightbox2/lightbox.min.js"></script>{% endif %}
+<script src="/js/main.js?v=20160108" type="text/javascript"></script>
 
 <!-- Plugins -->
   <!-- Google Analytics -->

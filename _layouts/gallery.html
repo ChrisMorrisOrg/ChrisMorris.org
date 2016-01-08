@@ -1,0 +1,49 @@
+---
+layout: layout
+class: gallery
+---
+
+<h1>{{ page.title }}</h1>
+
+<div class="post">
+
+  <header>
+    {% if page.date %}<time datetime="{{page.date | date: "%Y-%m-%d"}}">{{ page.date | date: "%B %e, %Y" }}</time>{% endif %}
+    {% if page.tags %}Tags:
+    <ul>
+      {% for tag in page.tags %}<li><a href="/tag/{{ tag }}/">{{ tag | replace: '-', ' ' }}</a></li>
+      {% endfor %}
+    </ul>{% endif %}
+    <span class="views inactive" data-slug="{{ page.url }}"></span>
+  </header>
+
+  <article>
+    {{ content }}
+    <ul class="gallery">
+      {% for image in page.gallery.images %}
+      {% capture imagemarkdown %}![{{ image.name}} ]({{ page.gallery.src }}/{{ image.image }}){% endcapture %}
+      <li><a href="{{ page.gallery.src }}/{{ image.image }}" data-lightbox="{{ page.gallery.id }}">{{ imagemarkdown | markdownify | remove: '<p>' | remove: '</p>' }}</a></li>
+      {% endfor %}
+    </ul>
+  </article>
+
+</div>
+
+{% if page.comments %}
+<div style="margin: 0.66em 0 0.3125em 0.625em;">
+    <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'chrismorrisorg';
+
+         (function() {
+            var dsq = document.createElement('script');
+            dsq.type ='text/javascript';
+            dsq.async = true;
+            dsq.src ='http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+{% endif %}

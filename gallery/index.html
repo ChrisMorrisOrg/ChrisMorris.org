@@ -5,7 +5,7 @@ title: Photography &amp; Artwork
 ---
 
        <h1>Photography &amp; Artwork</h1>
-       <ul class="link-list">{% for page in site.pages %}{% if page.art %}
+       <ul class="link-list">{% for page in site.pages %}{% if page.gallery %}
          <li>
            <a href="{{ page.url }}">
              <article>
@@ -13,7 +13,7 @@ title: Photography &amp; Artwork
                  {{ page.title }}
                </header>
                <footer>
-                 {{ page.title }}
+                 {{ page.gallery.images | size }} images
                </footer>
              </article>
            </a>

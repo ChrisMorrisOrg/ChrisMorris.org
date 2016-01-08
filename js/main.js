@@ -40,3 +40,9 @@ $(document).ready(function(){
 
   getQuote();
 });
+
+lightbox.option({
+  'fadeDuration': 0,
+  'resizeDuration': 0,
+  'wrapAround': true
+})
