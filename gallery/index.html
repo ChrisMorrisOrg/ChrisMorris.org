@@ -1,9 +1,21 @@
 ---
-layout: page
-colour: red
+layout: layout
+colour: purple
 title: Photography &amp; Artwork
-status: publish
-type: page
-published: true
 ---
-This page coming soon!
+
+       <h1>Photography &amp; Artwork</h1>
+       <ul class="link-list">{% for page in site.pages %}{% if page.art %}
+         <li>
+           <a href="{{ page.url }}">
+             <article>
+               <header>
+                 {{ page.title }}
+               </header>
+               <footer>
+                 {{ page.title }}
+               </footer>
+             </article>
+           </a>
+         </li>{% endif %}{% endfor %}
+       </ul>

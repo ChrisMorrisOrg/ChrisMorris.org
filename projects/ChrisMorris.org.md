@@ -1,6 +1,6 @@
 ---
 layout: post
-colour: purple
+colour: red
 title: 'ChrisMorris.org - A Jekyll-Powered Blog'
 tags:
 - projects
