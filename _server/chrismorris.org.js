@@ -13,40 +13,50 @@ console.log ('Using port ' + port)
 
 app.post('/views', function(req, res){
 
-  var slug		= (req.body.slug).replace(/^\/|\/$/g, ''); // Strip leading and trailing slashes
+  var url		= (req.body.slug).replace(/^\/|\/$/g, ''); // Strip leading and trailing slashes
   var mysql		= require('mysql');
   var mysqlConfig = require('./mysql-config');
   var connection	= mysql.createConnection(mysqlConfig.db);
 
   connection.connect();
 
-  // Return the number of views for a given URL
-  connection.query('SELECT FORMAT(views+1, 0) AS views FROM views WHERE url = ?', [slug], function(err, rows, fields) {
+  // Get view count and send it
+  connection.query('SELECT views FROM views WHERE url = ?', [url], function (err, results) {
     if (err) {
       console.error(err.message)
-    } else if (rows.affectedRows === 0) {
-      // Insert a new record if none exists
-      connection.query('INSERT INTO views (url, views) VALUES (?, ?)', [slug, 0], function (err, rows) {
-        if (err)
-          console.error(err.message)
-        else if (rows.affectedRows !== 1)
-          console.error('ERROR: Inserting new slug failed')
-        else
-          console.error('Added new slug ' + slug)
-      });
+      res.send({ err: 'Error: db error while getting view count' })
+    } else if (results.length === 0) {
+      res.send({ err: 'Error: url not found' })
+    } else {
+      res.send(results[0])
     }
 
-    console.log("POST: View incremented on slug = '" + slug + "', views now = " + rows[0]['views']);
+    // Asyncronously update the view count
+    connection.query(
+        'UPDATE views SET views=views+1 WHERE url = ?', [url],
+        function (err, results) {
+      if (err) {
+        console.error(err.message)
+        connection.end()
+      } else if (results.affectedRows === 0) {
+        // If no rows were affected, then this is a new post, so add it
+        connection.query(
+            'INSERT INTO views (url, views) VALUES (?, ?)', [url, 1],
+            function (err, results) {
+          if (err)
+            console.error(err.message)
+          else if (results.affectedRows !== 1)
+            console.error('ERROR: Inserting new url failed')
+          else
+            console.error('Added new url ' + url)
 
-    res.setHeader('Content-Type', 'application/json');
-    res.send(rows[0]);
-  });
-
-  // Update views
-  connection.query('UPDATE views SET views = views+1 WHERE url = ?', [slug], function(err, rows, fields) {});
-
-  // Close MySQL
-  connection.end();
+          connection.end()
+        })
+      } else {
+        connection.end()
+      }
+    })
+  })
 
 });
 
