@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 colour: red
 title: '5nake - Play Classic Snake in Your Browser with HTML5'
 tags:

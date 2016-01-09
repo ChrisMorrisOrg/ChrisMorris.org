@@ -1,6 +1,6 @@
 ---
 layout: layout
-class: gallery
+class: post
 ---
 
 <h1>{{ page.title }}</h1>
@@ -8,18 +8,12 @@ class: gallery
 <div class="post">
 
   <header>
-    {% if page.gallery_date %}<time datetime="{{page.gallery_date | date: "%Y-%m-%d"}}">{{ page.gallery_date | date: "%B %e, %Y" }}</time>{% endif %}
+    {% if page.project_date %}<time datetime="{{page.project_date | date: "%Y-%m-%d"}}">{{ page.project_date | date: "%B %e, %Y" }}</time>{% endif %}
     <span class="views inactive" data-slug="{{ page.url }}"></span>
   </header>
 
   <article>
     {{ content }}
-    <ul class="gallery">
-      {% for image in page.gallery.images %}
-      {% capture imagemarkdown %}![{{ image.name}} ]({{ page.gallery.src }}/{{ image.image }}){% endcapture %}
-      <li><a href="{{ page.gallery.src }}/{{ image.image }}" data-lightbox="{{ page.gallery.id }}">{{ imagemarkdown | markdownify | remove: '<p>' | remove: '</p>' }}</a></li>
-      {% endfor %}
-    </ul>
   </article>
 
 </div>
