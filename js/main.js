@@ -1,3 +1,14 @@
+// Shamelessly taken from @feross
+function addCommasToInteger(x) {
+  var rgx = /(\d+)(\d{3})/
+  x += ''
+
+  while (rgx.test(x)) {
+    x = x.replace(rgx, '$1' + ',' + '$2')
+  }
+  return x
+}
+
 $(document).ready(function(){
   $.ajaxSetup({cache:false});
   var slug;
@@ -12,7 +23,7 @@ $(document).ready(function(){
       },
       dataType: 'json',
       success: function(data) {
-        $('.views').text(data.views + " views");
+        $('.views').text(addCommasToInteger(data.views) + " views");
         $('.views').removeClass('inactive').addClass('active');
       },
       error: function(data, textStatus, errorThrown) {
