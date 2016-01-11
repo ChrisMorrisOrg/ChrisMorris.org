@@ -1,0 +1,2 @@
+# Ignore third-party libraries
+js/libs/* linguist-vendored
