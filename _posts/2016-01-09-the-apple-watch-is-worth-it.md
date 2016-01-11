@@ -2,7 +2,10 @@
 layout: post
 title: 'The Apple Watch is Worth It'
 tags:
+- apple
+- health and fitness
 - me
+- review
 status: publish
 type: post
 published: true
@@ -12,15 +15,15 @@ When the Apple Watch was announced, I was initially sceptical. The features and 
 
 ## The Good
 
-Let's start with the basics. A watch has historically been an item focused around helping the user manage their time. During my days at university, I no longer have to pull out my phone and check where my next class is, I just glance at my wrist and it tells me where I need to go. This isn't about me checking the time so much as it is keeping me on time. In fact, the calendar complication takes up the largest amount of space on my Watch, with the clock coming in second. I also have a secondary clock displaying the time in San Francisco, which helps keep me in line with friends from the "Land Up Over".
+Let's start with the basics. A watch has historically been an item focused around helping the user manage their time. During my days at university, I no longer have to pull out my phone and check where my next class is, I just glance at my wrist and it tells me where I need to go. This isn't about me checking the time so much as it is keeping me on time. In fact, the calendar complication takes up the largest amount of space on my Apple Watch, with the clock coming in second. I also have a secondary clock displaying the time in San Francisco, which helps keep me in line with friends from the "Land Up Over".
 
-With the size of phones increasing, the Watch has become even more "handy" for me. Although this might sound bizarre, it's actually really helpful if someone is texting or calling you when you're unable to reach for your phone. This has been particularly true when eating messy food... and apparently [I'm not the only one](http://qz.com/571237/almost-half-of-apple-watch-owners-have-used-their-nose-to-operate-the-device/) using my nose as an input device.
+With the size of phones increasing, the Apple Watch has become even more "handy" for me. Although this might sound bizarre, it's actually really helpful if someone is texting or calling you when you're unable to reach for your phone. This has been particularly true when eating messy food... and apparently [I'm not the only one](http://qz.com/571237/almost-half-of-apple-watch-owners-have-used-their-nose-to-operate-the-device/) using my nose as an input device.
 
-Finally, it's also a fantastic gizmo for entering codes generated with two-factor authentication. It's nice when I have to login to my online accounts on an unknown computer. I don't even have to lift my hands from the keyboard, I just flick my wrist and type in the security code that appears on my Watch.
+Finally, it's also a fantastic gizmo for entering codes generated with two-factor authentication. It's nice when I have to login to my online accounts on an unknown computer. I don't even have to lift my hands from the keyboard, I just flick my wrist and type in the security code that appears on my Apple Watch.
 
 ## The Badass
 
-Apart from feeling like a secret agent talking to my wrist, when I'm actually just texting Mum, the Apple Watch has some really cool apps available for it too. Shazam, for example, brings up the lyrics of the song playing in the background and moves the text in-sync with the song - it's crazy! Withdrawing money from my bank account is as easy as tapping the icon, pressing "cardless cash", and selecting an amount - it's arguably more secure than typing in a pin code at an ATM. Even using Apple Watch as a clicker for Keynote presentations is an example that there are apps that really were made for the Watch that can't be done as elegantly on iPhone.
+Apart from feeling like a secret agent talking to my wrist, when I'm actually just texting Mum, the Apple Watch has some really cool apps available for it too. Shazam, for example, brings up the lyrics of the song playing in the background and moves the text in-sync with the song - it's crazy! Withdrawing money from my bank account is as easy as tapping the icon, pressing "cardless cash", and selecting an amount - it's arguably more secure than typing in a pin code at an ATM. Even using Apple Watch as a clicker for Keynote presentations is an example that there are apps that really were made for the watch that can't be done as elegantly on iPhone.
 
 More than anything, I love controlling the music playing in the car from my wrist. It's so natural, and feels like I'm using a tiny, powerful iPod Nano. What's more enjoyable is having my iPhone in another room of the house, or connected to the TV. Then when someone is sitting down, unexpectedly, I can start blasting [this](https://www.youtube.com/watch?v=enMReCEcHiM) through the house.
 
@@ -34,7 +37,7 @@ I have never been a "fitness freak". Sure, I like to feel good like everybody el
 
 The Apple Watch displays three coloured rings for your day-to-day fitness. The red circle indicates movement, the green circle in the middle is for exercise, and the blue circle counts how many hours during the day you've stood up and walked around. The ability to actually *see* your progress helps to teach you how exercise correlates with your mood, motivation and overall feeling. Even outside of exercise, seeing how my heart rate changes throughout the day or when I'm put in certain situations teaches me things I never knew about myself.
 
-One could argue that other smartwatches offer fitness tracking. The Apple Watch offers something that competing smart watches don't, though. It's not just about the fitness. It's about the range of apps, ease-of-use, the gorgeous high-res display, the vast range of bands, the deep integration with iPhone. All of this combined makes me *want* to wear this device every day. Just check out my history from July to November.
+One could argue that other smartwatches offer fitness tracking. The Apple Watch offers something that competing smartwatches don't, though. It's not just about the fitness. It's about the range of apps, ease-of-use, the gorgeous high-res display, the vast range of bands, the deep integration with iPhone. All of this combined makes me *want* to wear this device every day. Just check out my history from July to November.
 
 ![Apple Watch Fitness Progress](/images/apple-watch-fitness-01.png)
 
