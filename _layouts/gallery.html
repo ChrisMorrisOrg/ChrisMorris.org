@@ -2,34 +2,26 @@
 layout: layout
 class: gallery
 ---
-
-<h1>{{ page.title }}</h1>
-
-<div class="post">
-
-  <header>
-    {% if page.gallery_date %}<time datetime="{{page.gallery_date | date: "%Y-%m-%d"}}">{{ page.gallery_date | date: "%B %e, %Y" }}</time>{% endif %}
-    <span class="views inactive" data-slug="{{ page.url }}"></span>
-  </header>
-
-  <article>
-    {{ content }}
-    <ul class="gallery">
-      {% for image in page.gallery.images %}
-      {% capture imagemarkdown %}![{{ image.name}} ]({{ page.gallery.src }}/{{ image.image }}){% endcapture %}
-      <li><a href="{{ page.gallery.src }}/{{ image.image }}" data-lightbox="{{ page.gallery.id }}">{{ imagemarkdown | markdownify | remove: '<p>' | remove: '</p>' }}</a></li>
-      {% endfor %}
-    </ul>
-  </article>
-
-</div>
-
-{% if page.comments %}
-<div style="margin: 0.66em 0 0.3125em 0.625em;">
-    <div id="disqus_thread"></div>
+      <section id="main-fill">
+        <article>
+          <h1>{{ page.title }}</h1>
+          <header id="meta">
+            {% if page.gallery_date %}<time datetime="{{page.gallery_date | date: "%Y-%m-%d"}}">{{ page.gallery_date | date: "%B %e, %Y" }}</time>{% endif %}
+            <span class="views inactive" data-slug="{{ page.url }}"></span>
+          </header>
+          {{ content }}
+          <ul class="gallery">
+            {% for image in page.gallery.images %}
+            {% capture imagemarkdown %}![{{ image.name}} ]({{ page.gallery.src }}/thumbs/{{ image.image }}){% endcapture %}
+            <li><a href="{{ page.gallery.src }}/{{ image.image }}" data-group="{{ page.gallery.id }}">{{ imagemarkdown | markdownify | remove: '<p>' | remove: '</p>' }}</a></li>
+            {% endfor %}
+          </ul>
+        </article>
+        {% if page.comments %}
+        <h1>Comments</h1>
+        <div id="disqus_thread"></div>
         <script type="text/javascript">
           var disqus_shortname = 'chrismorrisorg';
-
          (function() {
             var dsq = document.createElement('script');
             dsq.type ='text/javascript';
@@ -39,6 +31,5 @@ class: gallery
         })();
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-{% endif %}
+        {% endif %}
+      </section>

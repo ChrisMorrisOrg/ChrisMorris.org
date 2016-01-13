@@ -3,19 +3,20 @@ layout: layout
 colour: purple
 title: Photography &amp; Artwork
 ---
-
-       <h1>Photography &amp; Artwork</h1>
-       <ul class="link-list">{% for page in site.pages %}{% if page.gallery %}
-         <li>
-           <a href="{{ page.url }}">
-             <article>
-               <header>
-                 {{ page.title }}
-               </header>
-               <footer>
-                 {{ page.gallery.images | size }} images
-               </footer>
-             </article>
-           </a>
-         </li>{% endif %}{% endfor %}
-       </ul>
+      <section id="main-fill">
+        <h1>Photography &amp; Artwork</h1>
+        <ul class="link-list">{% for page in site.pages %}{% if page.gallery %}
+          <li>
+            <a href="{{ page.url }}">
+              <article>
+                <header>
+                  {{ page.title }}
+                </header>
+                <footer>
+                  {{ page.gallery.images | size }} images
+                </footer>
+              </article>
+            </a>
+          </li>{% endif %}{% endfor %}
+        </ul>
+      </section>

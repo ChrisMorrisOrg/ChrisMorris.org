@@ -1,106 +1,48 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-
-<head>
-  <meta charset="UTF-8">
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Oswald:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-  <link rel="canonical" href="http://chrismorris.org{{ page.url }}" />
-
-  <title>{{ page.title }} &raquo; ChrisMorris.org</title>
-  {% if site.description %}  <meta name="description" content="{{ site.description }}">{% endif %}
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta property="og:title" content="{{ page.title }} &raquo; ChrisMorris.org" />
-  <meta property="og:type" content="article" />
-  <meta property="og:image" content="http://chrismorris.org/img/display_picture.jpg" />
-  <meta property="og:site_name" content="ChrisMorris.org" />
-
-  <meta property="fb:admins" content="1721669711307072" />
-  <meta property="fb:app_id" content="100004780085723" />
-
-  <link rel="stylesheet" href="/css/{% if page.colour %}{{ page.colour }}{% else %}blue{% endif %}.css?v=20160112">
-  {% if page.gallery %}<link rel="stylesheet" href="/js/libs/lightbox2/lightbox.min.css">{% endif %}
-
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-  <link rel="alternate" type="application/atom+xml" title="ChrisMorris.org" href="http://feeds.feedburner.com/ChrisMorrisOrg" />
-</head>
-
-<body>
-  <div id="container">
-    <!-- Prompt IE 6 users to install Chrome Frame -->
-    <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-    <div class="clearfix bannerunderlay"></div>
-
-    <div {% if page.type == "post" %}id="containment-thin"{% else %}id="containment-thin"{% endif %}>
-      <header class="clearfix banner">
-        <a href="/"><h1>Chris Morris</h1></a>
-        <h2>Scitechivity</h2>
+{% assign pageurlarray = page.url | split:'/' %}
+  {% case pageurlarray[1] %}
+    {% when 'projects' %}
+      {% assign projectsactive = true %}
+    {% when 'gallery' %}
+      {% assign galleryactive = true %}
+    {% when 'contact' %}
+      {% assign contactactive = true %}
+    {% else %}
+      {% assign blogactive = true %}
+{% endcase %}<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <div id="container">
+      <header id="global-header">
+        <h1><a href="/">Chris Morris</a></h1>
+        <nav>
+          <ul>
+            <li><a {% if blogactive %} class="selected-outline"{% endif %} href="/">Blog</a></li>
+            <li><a {% if projectsactive %} class="selected-outline"{% endif %} href="/projects/">Projects</a></li>
+            <li><a {% if galleryactive %} class="selected-outline"{% endif %}href="/gallery/">Gallery</a></li>
+            <li><a {% if contactactive %} class="selected-outline"{% endif %}href="/contact/">Contact</a></li>
+          </ul>
+        </nav>
       </header>
 
-      <section id="content" role="main">
+      <div id="main-container">
         {{ content }}
-      </section>
+      </div>
 
-      <section id="sidebar">
-        <div id="offset">
-          <nav>
-            <ul>
-              <li><a href="/"><h1 class="blue">Blog</h1></a></li>
-              <li><a href="/gallery/"><h1 class="purple">Photography &amp; Artwork</h1></a></li>
-              <li><a href="/projects/"><h1 class="red">Projects</h1></a></li>
-              <li><a href="/about/"><h1 class="orange">About</h1></a></li>
-              <li><a href="/contact/"><h1 class="green">Contact</h1></a></li>
-            </ul>
-          </nav>
-          <h1 class="default-static" id="getQuote">Random Quote</h1>
-          <div class="box">
-          </div>
-          <h1 class="default-static">Friends</h1>
-          <ul class="sub">
-            <li><a target="_blank" href="http://aadeeba.com/">Aadeeba Mou</a></li>
-            <li><a target="_blank" href="http://cwhitey.me/">Callum White</a></li>
-            <li><a target="_blank" href="http://dilpreetsingh.me/">Dilpreet Singh</a></li>
-            <li><a target="_blank" href="http://feross.org/">Feross Aboukhadijeh</a></li>
-            <li><a target="_blank" href="https://hugo.sx/">Hugo Müller-Downing</a></li>
-            <li><a target="_blank" href="http://jonrodriguez.org/">Jon Rodriguez</a></li>
-            <li><a target="_blank" href="http://backflipboy.mitch.pro/">Kevin Wilson</a></li>
-            <li><a target="_blank" href="http://www.lucasazzola.com/">Lucas Azzola</a></li>
-            <li><a target="_blank" href="http://mike.bitrevision.com/">Michael Billington</a></li>
-            <li><a target="_blank" href="http://michalogy.wordpress.com/">Michelle H</a></li>
-            <li><a target="_blank" href="http://www.quasilocal.com/">Stephen McCormick</a></li>
-            <li><a target="_blank" href="http://blog.terencehuynh.com/">Terence Huynh</a></li>
-          </ul>
+      <footer id="global-footer">
+        <div style="width: 100%;">
+          © Chris Morris<br>
+          Made in Melbourne
         </div>
-      </section>
+      </footer>
     </div>
-  </div>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<!--<script>window.jQuery || document.write('<script src="/js/libs/jquery-1.9.0.min.js"><\/script>')</script>-->
-{% if page.gallery %}<script src="/js/libs/lightbox2/lightbox.min.js"></script>{% endif %}
-<script src="/js/main.js?v=20160110B" type="text/javascript"></script>
-
-<!-- Plugins -->
-  <!-- Google Analytics -->
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-36771574-1']);
-    _gaq.push(['_setDomainName', 'chrismorris.org']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-
-</body>
+    <div id="overlay">
+      <div id="image-placeholder"></div>
+    </div>
+  </body>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <!--<script>window.jQuery || document.write('<script src="/js/jquery-2.2.0.min.js"><\/script>')</script>-->
+  <script src="/js/main.js?v=20160130" type="text/javascript"></script>
 </html>

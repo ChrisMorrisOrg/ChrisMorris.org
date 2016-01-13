@@ -1,0 +1,43 @@
+---
+layout: layout
+title: Friends
+friends:
+- name: "Aadeeba Mou"
+  url: "http://aadeeba.com/"
+- name: "Callum White"
+  url: "http://cwhitey.me/"
+- name: "Dilpreet Singh"
+  url: "http://dilpreetsingh.me/"
+- name: "Feross Aboukhadijeh"
+  url: "http://feross.org/"
+- name: "Hugo Müller-Downing"
+  url: "https://hugo.sx/"
+- name: "Jon Rodriguez"
+  url: "http://jonrodriguez.org/"
+- name: "Kevin Wilson"
+  url: "http://backflipboy.mitch.pro/"
+- name: "Lucas Azzola"
+  url: "http://www.lucasazzola.com/"
+- name: "Michael Billington"
+  url: "http://mike.bitrevision.com/"
+- name: "Michelle H"
+  url: "http://michalogy.wordpress.com/"
+- name: "Stephen McCormick"
+  url: "http://www.quasilocal.com/"
+- name: "Terence Huynh"
+  url: "http://blog.terencehuynh.com/"
+---
+      <section id="main-fill">
+        <h1>Friends</h1>
+        <p>When you're done snooping around my blog, why not check out some of these awesome people?</p>
+        <ul class="link-list">{% for friend in page.friends %}
+         <li>
+           <a target="_blank" href="{{ friend.url }}">
+             <article>
+               <header>{{ friend.name }}</header>
+               <footer>{{ friend.url | remove: 'http://' | remove: 'https://' | remove: '/' | remove: 'www.' }}</footer>
+             </article>
+           </a>
+         </li>{% endfor %}
+        </ul>
+      </section>

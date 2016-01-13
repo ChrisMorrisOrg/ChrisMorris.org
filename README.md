@@ -14,7 +14,7 @@ Design
 ------
 At present I would appreciate it if you create your own design should you fork this repository, simply because I am branding my work with the current design. Thank you!
 
-There are several different colour schemes with the current design. Any post can be assigned a theme by adding "colour: <colour>" to the YAML front matter, the default is blue.
+The previous design that served the website from 2012 to early 2016 can still be found in the repo's history, but for the sake of .
 
 Deployment
 ----------
@@ -33,5 +33,3 @@ For information on how to setup these services, I fully recommend checking out t
 Background
 ----------
 Jekyll was suggested to me by [Feross Aboukhadijeh](http://feross.org/). After seeing how fast his site loaded, I was sold. A lot of functionality of this website has been taken or inspired from [feross.org](https://github.com/feross/feross.org)
-
-The inspiration for the design was sporadic. I wanted an organised layout, but I also wanted to take advantage of CSS3 and give the site a bit of a futuristic feeling. I was aiming for a design that felt a bit like a computer display that you might see on a spaceship.

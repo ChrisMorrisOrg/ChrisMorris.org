@@ -1,21 +1,17 @@
 ---
 layout: layout
-colour: red
 title: Projects
 ---
-
-       <h1>Projects and Source Code</h1>
-       <ul class="link-list">{% for page in site.pages %}{% if page.project %}
+      <section id="main-fill">
+        <h1>Projects and Source Code</h1>
+        <ul class="link-list">{% for page in site.pages %}{% if page.project %}
          <li>
            <a href="{{ page.url }}">
              <article>
-               <header>
-                 {{ page.title }}
-               </header>
-               <footer>
-                 {{ page.project_date }}
-               </footer>
+               <header>{{ page.title }}</header>
+               <footer>{{ page.project_date }}</footer>
              </article>
            </a>
          </li>{% endif %}{% endfor %}
-       </ul>
+        </ul>
+      </section>

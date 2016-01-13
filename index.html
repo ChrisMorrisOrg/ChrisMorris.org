@@ -2,38 +2,46 @@
 layout: layout
 title: Chris Morris - Scitechivity!
 ---
-      <h1>Blog Posts</h1>
-      <ul class="link-list">
-        {% for post in site.posts %}
-        {% unless post.hidden %}
-        <li>
-          <a href="{{ post.url }}">
-            <article>
-              <header>
-              {{ post.title }}
-              </header>
-              <footer>
-              {{ post.date | date: "%B %e, %Y" }}
-              </footer>
-            </article>
-          </a>
-        </li>
-        {% endunless %}
-        {% endfor %}
-      </ul>
+      <section id="main">
+        <h1>Blog Posts</h1>
+        <ul class="link-list">
+          {% for post in site.posts %}
+          {% unless post.hidden %}
+          <li>
+            <a href="{{ post.url }}">
+              <article>
+                <header>{{ post.title }}</header>
+                <footer>{{ post.date | date: "%B %e, %Y" }}</footer>
+              </article>
+            </a>
+          </li>
+          {% endunless %}
+          {% endfor %}
+        </ul>
+      </section>
 
-      <h1>Projects and Source Code</h1>
-      <ul class="link-list">{% for page in site.pages %}{% if page.project %}
-        <li>
-          <a href="{{ page.url }}">
-            <article>
-              <header>
-                {{ page.title }}
-              </header>
-              <footer>
-                {{ page.project_date }}
-              </footer>
-            </article>
-          </a>
-        </li>{% endif %}{% endfor %}
-      </ul>
+      <section id="sidebar">
+        <h1>Scitechivity!</h1>
+        <p>I'm <strong style="color: #fff;">Chris Morris</strong>, I love science, technology and creativity!</p>
+        <img src="/images/me-with-tim-cook.jpg" width="100%" />
+        <a class="twitter-timeline" href="https://twitter.com/ChrisMorrisOrg" data-chrome="transparent noborders" data-widget-id="686767922857955328">Tweets by @ChrisMorrisOrg</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <h1>Other</h1>
+        <ul class="link-list">
+          <li>
+            <a href="/friends/">
+              <article>
+                <header>Friends</header>
+                <footer>People who've impacted me</footer>
+              </article>
+            </a>
+          </li>
+          <li>
+            <a href="/quotes/">
+              <article>
+                <header>Favourite Quotes</header>
+                <footer>Interesting and inspirational thoughts</footer>
+              </article>
+            </a>
+          </li>
+        </ul>
+      </section>
