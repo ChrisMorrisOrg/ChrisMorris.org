@@ -12,9 +12,7 @@ Because the pages are static, I use JavaScript to include view counts and Disqus
 
 Design
 ------
-At present I would appreciate it if you create your own design should you fork this repository, simply because I am branding my work with the current design. Thank you!
-
-The previous design that served the website from 2012 to early 2016 can still be found in the repo's history, but for the sake of .
+At present I would appreciate it if you create your own design should you fork this repository, simply because I am branding my work with the current and previous design. Thank you!
 
 Deployment
 ----------
