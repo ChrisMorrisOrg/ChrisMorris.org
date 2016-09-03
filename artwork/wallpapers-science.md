@@ -1,6 +1,5 @@
 ---
 layout: gallery
-colour: purple
 title: 'Wallpapers - Science'
 tags:
 - art

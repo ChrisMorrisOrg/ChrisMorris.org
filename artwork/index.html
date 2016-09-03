@@ -1,0 +1,22 @@
+---
+layout: layout
+color: black
+title: Artwork
+---
+      <section id="main-fill">
+        <h1>Artwork</h1>
+        <ul class="link-list">{% for page in site.pages %}{% if page.tags contains 'art' %}
+          <li>
+            <a href="{{ page.url }}">
+              <article>
+                <header>
+                  {{ page.title }}
+                </header>
+                <footer>
+                  {{ page.gallery.images | size }} images
+                </footer>
+              </article>
+            </a>
+          </li>{% endif %}{% endfor %}
+        </ul>
+      </section>

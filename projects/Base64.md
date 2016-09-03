@@ -1,6 +1,5 @@
 ---
 layout: project
-colour: red
 title: "Base64 - Generate base64 image data URL's"
 tags:
 - projects

@@ -1,6 +1,6 @@
 ---
 layout: page
-colour: red
+color: red
 title: Not Found
 status: publish
 type: page

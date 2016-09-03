@@ -3,6 +3,8 @@
 $standard-text-color = rgb(178, 216, 250)
 $standard-text-color-highlight = rgb(250, 250, 250)
 $standard-text-color-alpha = rgba(178, 216, 250, 0.5)
+$frosted-background-color = rgba(0, 0, 0, 0.3)
+$frosted-background-intensity = 0.5em
 
 blockquote.twitter-tweet {
   font-family: Soleil, sans-serif;
@@ -30,65 +32,99 @@ body {
   font-size: 1em;
   color: $standard-text-color;
   height: 100%;
+  cursor: default;
+}
+body.black {
+  background-color: rgb(25, 25, 25);
+  background-image: none;
 }
 a, footer, li img {
-  transition: 0.2s all ease-in-out;
+  transition-duration: 0.2s;
+  transition-property: color, background, border;
+  transition-timing-function: ease-in-out;
 }
-#container {
-  cursor: default;
-  display: block;
-  max-width: 60em;
-  margin: 0 auto;
-  padding: 0 1em;
+
+
+@supports not ((backdrop-filter: blur(0.5em)) or (-webkit-backdrop-filter: blur(0.5em))) {
   header#global-header {
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-image: linear-gradient(to right, rgba(178, 216, 250, 0), rgba(178, 216, 250, 0.4) 50%, rgba(178, 216, 250, 0));
-    border-image-slice: 1;
-    /*background-image: radial-gradient(50% 100%, 50% 10%, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 75%);*/
+    background: rgba(0, 0, 0, 0.75);
+  }
+}
+@supports ((backdrop-filter: blur(0.5em)) or (-webkit-backdrop-filter: blur(0.5em))) {
+  header#global-header {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(0.5em);
+    -webkit-backdrop-filter: blur(0.5em);
+  }
+}
+
+header#global-header {
+  z-index: 9;
+  width: 100%;
+  position: fixed;
+  text-transform: uppercase;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-image: linear-gradient(to right, rgba(178, 216, 250, 0), rgba(178, 216, 250, 0.4) 50%, rgba(178, 216, 250, 0));
+  border-image-slice: 1;
+  button {
+    display: none;
+  }
+  div {
+    max-width: 60em;
+    padding: 0 0.5em 0 0.5em;
+    margin: 0 auto;
     display: flex;
-    padding: 0.5em 0 0.5em 0;
     align-items: center;
     justify-content: space-between;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 1.2em;
+    margin: 0;
     a {
-      color: #fff;
-      text-decoration: none;
+      padding: 1em 0.5em;
     }
-    h1 {
-      font-weight: 600;
-      font-size: 3em;
-      margin: 0.4em 0;
+  }
+  nav {
+    display: block;
+    transition: max-height .2s ease-in-out;
+    &.reveal {
+      max-height: 25em;
+      overflow: scroll;
     }
-    nav {
-      font-size: 1.2em;
-      ul {
+    font-size: 1.2em;
+    float: right;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      li {
         margin: 0;
-        padding: 0;
-        list-style: none;
-        display: flex;
-        li {
-          a {
-            border-radius: 0.25em;
-            color: $standard-text-color;
-            border: 1px solid rgba(0,0,0,0);
-            padding: 0.15em 0.5em 0.35em 0.5em;
-            margin: 0 0.5em;
-            &:hover {
-              border-color: $standard-text-color;
-            }
-            &.selected-outline {
-              border-color: $standard-text-color-highlight;
-              color: $standard-text-color-highlight;
-            }
-            &.selected-outline:hover {
-              border-color: $standard-text-color-highlight;
-              color: $standard-text-color-highlight;
-            }
+        padding: 1em 0;
+        a {
+          color: $standard-text-color;
+          padding: 1em 0.5em;
+          &:hover {
+            color: rgba(255, 255, 255, 1);
+            text-shadow: hsla(235, 100%, 100%, 0.75) 0 0 0.25em;
           }
         }
       }
     }
   }
+}
+
+#container {
+  display: block;
+  max-width: 60em;
+  margin: 0 auto;
+  padding: 4em 1em 0 1em;
   footer#global-footer {
     border-width: 1px 0 0 0;
     border-style: solid;
@@ -257,8 +293,18 @@ a, footer, li img {
 
 
 div#overlay {
-  display: none;
+  z-index: 49;
+  transition: visibility 0.2s, opacity 0.2s ease-in-out;
+  &.reveal {
+    opacity: 1;
+    display: block;
+    visibility: visible;
+  }
+  visibility: hidden;
+  opacity: 0;
   background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.5em);
+  -webkit-backdrop-filter: blur(0.5em);
   position: fixed;
   left: 0;
   right: 0;
@@ -270,6 +316,40 @@ div#overlay {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  #closeOverlay {
+    width: 2em;
+    height: 1.8em;
+    position: fixed;
+    right: 1.9em;
+    top: 1.9em;
+    display: block;
+    transform: rotate(0deg);
+    transition: .2s ease-in-out;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    span {
+      &:nth-child(1) {
+        transform: rotate(-45deg);
+      }
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+      top: 0.75em;
+      display: block;
+      position: absolute;
+      height: 0.2em;
+      width: 100%;
+      background: #fff;
+      opacity: 1;
+      border-radius: 0.2em;
+      left: 0;
+    }
   }
 }
 
@@ -305,19 +385,88 @@ div#overlay {
     }
   }
 
-  #container {
-    header#global-header {
+  header#global-header {
+    text-align: center;
+    #displayNavigation {
+      width: 2em;
+      height: 1.8em;
+      position: fixed;
+      right: 1.9em;
+      top: 1.9em;
       display: block;
-      padding: 0.25em 0 1em 0;
-      align-items: none;
-      justify-content: none;
-      text-align: center;
-      nav {
-        margin: 0em 0 0.45em 0;
-        display: inline-block;
-        h1 {
-          margin: 0.225em 0 .4em 0;
-          font-size: 2.5em;
+      transform: rotate(0deg);
+      transition: .2s ease-in-out;
+      appearance: none;
+      box-shadow: none;
+      border-radius: none;
+      border: none;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0);
+      span {
+        &:nth-child(1) {
+          top: 0em;
+        }
+        &:nth-child(2), &:nth-child(3) {
+          top: 0.75em;
+        }
+        &:nth-child(4) {
+          top: 1.5em;
+        }
+        display: block;
+        position: absolute;
+        height: 0.2em;
+        width: 100%;
+        background: #fff;
+        opacity: 1;
+        border-radius: 0.2em;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .2s ease-in-out;
+      }
+      &.open {
+        span {
+          &:nth-child(1) {
+            top: 0.75em;
+            width: 0%;
+            left: 50%;
+          }
+          &:nth-child(2) {
+            transform: rotate(45deg);
+          }
+          &:nth-child(3) {
+            transform: rotate(-45deg);
+          }
+          &:nth-child(4) {
+            top: 0.75em;
+            width: 0%;
+            left: 50%;
+          }
+        }
+      }
+    }
+    div {
+      max-width: 60em;
+      padding: 0 0.5em 0 0.5em;
+      margin: 0 auto;
+      display: block;
+    }
+    h1 {
+      display: block;
+      padding: 1em;
+    }
+    nav {
+      max-height: 0;
+      float: none;
+      overflow: hidden;
+      transition: max-height .2s ease-in-out;
+      ul {
+        display: block;
+        li {
+          padding: 0;
+          display: block;
+          a {
+            display: block;
+          }
         }
       }
     }

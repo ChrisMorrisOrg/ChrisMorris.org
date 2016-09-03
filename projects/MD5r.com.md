@@ -1,6 +1,5 @@
 ---
 layout: project
-colour: red
 title: 'MD5r - Hash and Crack MD5 Digests'
 tags:
 - projects

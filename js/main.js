@@ -31,14 +31,19 @@ $(document).ready(function () {
     })
   }
 
+  $('#displayNavigation').click(function (e) {
+    $('#global-header nav').toggleClass('reveal')
+    $(this).toggleClass('open')
+  })
+
   $('a[data-group]').click(function (e) {
     var imageURL = 'url(' + $(this).attr('href') + ')'
-    $('#overlay').show()
+    $('#overlay').addClass('reveal')
     $('#image-placeholder').css('background-image', imageURL)
     e.preventDefault()
   })
 
-  $('#overlay').click(function (e) {
-    $('#overlay').hide()
+  $('#overlay, #closeOverlay').click(function (e) {
+    $('#overlay').removeClass('reveal')
   })
 })

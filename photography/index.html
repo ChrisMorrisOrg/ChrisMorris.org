@@ -1,11 +1,11 @@
 ---
 layout: layout
-colour: purple
-title: Photography &amp; Artwork
+color: black
+title: Photography
 ---
       <section id="main-fill">
-        <h1>Photography &amp; Artwork</h1>
-        <ul class="link-list">{% for page in site.pages %}{% if page.gallery %}
+        <h1>Coming Soon: Photography</h1>
+        <ul class="link-list">{% for page in site.pages %}{% if page.tags contains 'photography' %}
           <li>
             <a href="{{ page.url }}">
               <article>

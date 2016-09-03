@@ -11,7 +11,7 @@
 {% endcase %}<html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/style.css?v=20160113N">
+    <link rel="stylesheet" href="/css/style.css?v=20160903">
     <link rel="canonical" href="http://chrismorris.org{{ page.url }}" />
     <title>{{ page.title }} &raquo; ChrisMorris.org</title>
 {% if site.description %}    <meta name="description" content="{{ site.description }}">{% endif %}
@@ -32,20 +32,27 @@
     <script src="https://use.typekit.net/yyu6uto.js"></script>
     <script>try{Typekit.load({ async: false });}catch(e){}</script>
   </head>
-  <body>
-    <div id="container">
-      <header id="global-header">
+  <body{% if page.color contains 'black' %} class="black"{% endif %}>
+
+    <header id="global-header">
+      <div>
         <h1><a href="/">Chris Morris</a></h1>
         <nav>
           <ul>
-            <li><a {% if blogactive %} class="selected-outline"{% endif %} href="/">Blog</a></li>
-            <li><a {% if projectsactive %} class="selected-outline"{% endif %} href="/projects/">Projects</a></li>
-            <li><a {% if galleryactive %} class="selected-outline"{% endif %}href="/gallery/">Gallery</a></li>
-            <li><a {% if contactactive %} class="selected-outline"{% endif %}href="/contact/">Contact</a></li>
-          </ul>
+            <li><a href="/">Blog</a></li>
+            <li><a href="/projects">Code</a></li>
+            <!-- <li><a href="/photography">Photos</a></li> -->
+            <li><a href="/artwork">Art</a></li>
+            <!-- <li><a href="/music">Music</a></li> -->
+            <li><a href="/more">More</a></li>
+            <li><a href="/contact">Contact</a></li>
+          <ul>
         </nav>
-      </header>
+        <button id="displayNavigation"><span></span><span></span><span></span><span></span></button>
+      </div>
+    </header>
 
+    <div id="container">
       <div id="main-container">
         {{ content }}
       </div>
@@ -59,11 +66,12 @@
     </div>
     <div id="overlay">
       <div id="image-placeholder"></div>
+      <button id="closeOverlay"><span></span><span></span></button>
     </div>
   </body>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <!--<script>window.jQuery || document.write('<script src="/js/jquery-2.2.0.min.js"><\/script>')</script>-->
-  <script src="/js/main.js?v=20160113" type="text/javascript"></script>
+  <script src="/js/main.js?v=20160903" type="text/javascript"></script>
   <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-36771574-1']);

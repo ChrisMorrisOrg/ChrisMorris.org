@@ -1,6 +1,5 @@
 ---
 layout: project
-colour: red
 title: 'ChrisMorris.org - A Jekyll-Powered Blog'
 tags:
 - projects
