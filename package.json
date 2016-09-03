@@ -1,8 +1,8 @@
 {
   "name": "chrismorris.org",
   "description": "Scitechivity! Science. Technology. Creativity. (My Jekyll-powered blog.)",
-  "author": "Chris Morris <chris@chrismorris.org> (http://chrismorris.org/)",
-  "homepage": "http://chrismorris.org",
+  "author": "Chris Morris <chris@chrismorris.org> (https://chrismorris.org/)",
+  "homepage": "https://chrismorris.org",
   "version": "2.0.0",
   "license": "GPLv3",
   "main": "chrismorris.org.js",

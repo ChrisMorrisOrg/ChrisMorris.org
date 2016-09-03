@@ -1,10 +1,10 @@
-# [ChrisMorris.org](http://chrismorris.org) - Scitechivity
+# [ChrisMorris.org](https://chrismorris.org) - Scitechivity
 
 Copyright © 2012-2016 Chris Morris
 
 Overview
 --------
-This is the source code for my personal website [ChrisMorris.org](http://chrismorris.org). Feel free to browse and fork. If you have any questions, please [contact me](http://twitter.com/ChrisMorrisOrg).
+This is the source code for my personal website [ChrisMorris.org](https://chrismorris.org). Feel free to browse and fork. If you have any questions, please [contact me](https://twitter.com/ChrisMorrisOrg).
 
 The site is powered by [Jekyll](http://jekyllrb.com/), a static-site generator. Jekyll converts all posts and pages from Markdown into static HTML files. Compared to WordPress, this allows the site to load extremely fast and vastly reduces resources required to run the website.
 
