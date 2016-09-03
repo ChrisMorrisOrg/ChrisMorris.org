@@ -1,14 +1,5 @@
-{% assign pageurlarray = page.url | split:'/' %}
-  {% case pageurlarray[1] %}
-    {% when 'projects' %}
-      {% assign projectsactive = true %}
-    {% when 'gallery' %}
-      {% assign galleryactive = true %}
-    {% when 'contact' %}
-      {% assign contactactive = true %}
-    {% else %}
-      {% assign blogactive = true %}
-{% endcase %}<html>
+<!doctype html>
+<html>
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/style.css?v=20160903">
