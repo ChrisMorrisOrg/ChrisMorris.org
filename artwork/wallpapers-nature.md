@@ -1,5 +1,6 @@
 ---
 layout: gallery
+color: black
 title: 'Wallpapers - Nature'
 tags:
 - art
