@@ -29,7 +29,7 @@ Since Touch Bar has a fairly customisable display (and multi-touch), there are m
 
 The Touch Bar is also built-in to the MacBook Pro and is unobtrusive. Reports state that the Touch Bar matches fairly well with the brightness of the physical keys, so it doesn’t look out-of-place. Using the Touch Bar also doesn't block your display, which has benefits when screen real estate is so valuable, especially with a laptop form factor.
 
-__Update: It turns out that the new MacBook Pro will automatically turn itself on when the laptop is opened, even when fully shut down. This is incredibly cool, and renders my criticism about the power button below moot!__
+__Update: It turns out that the new MacBook Pro will automatically turn itself on when the laptop is opened, even when fully shut down. This is incredibly cool, and renders my criticism about the power button below moot!__ I saw this in action in a [video](https://youtu.be/PW8ZVpirzVA?t=201) by EverythingApplePro and another [video](https://youtu.be/kFolvM_uozU?t=639) from MobileTechReview.
 
 The only thing I would alter about the Touch Bar is the Touch ID/power button. In my opinion, it’s unclear where the power button actually is on the keyboard. Sure, Mac users all have the learned behaviour that the power will be in the top-right, but it’s not immediately obvious to a new user. I also dislike that the Touch Bar has to point an arrow towards the Touch ID sensor when you want to use Apple Pay. That said, I’m sure in future iterations, Touch ID will eventually be incorporated directly into the Touch Bar.
 
