@@ -23,7 +23,7 @@ From a user experience point-of-view, it's a pleasure dropping my AirPods into t
 
 I love how Apple have even hidden the regulatory stamps within the top of the lid, on the front-side, so you never see them in general use. This is also true for the AirPods themselves, which have the regulatory logos printed just behind the earpiece.
 
-![AirPod Regularoty Symbols](/images/airpods-regulatory-symbols.jpg)
+![AirPod Regulatory Symbols](/images/airpods-regulatory-symbols.jpg)
 
 ## Battery and Charging
 
