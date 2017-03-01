@@ -1,6 +1,8 @@
 # [ChrisMorris.org](https://chrismorris.org) - Scitechivity
 
-Copyright © 2012-2016 Chris Morris
+[![Build Status](https://travis-ci.org/ChrisMorrisOrg/ChrisMorris.org.svg?branch=master)](https://travis-ci.org/ChrisMorrisOrg/ChrisMorris.org)
+
+Copyright © 2012-2017 Chris Morris
 
 Overview
 --------
@@ -20,7 +22,7 @@ The website runs on an Nginx server, with supervisord running the Node applicati
 
 Have a read through the package.json file to see how you can run `npm run push` to do your blog writing on your local computer and have it rsync'd to your server.
 
-For information on how to setup these services, I fully recommend checking out these articles:
+For information on how to setup these services, I recommend checking out these articles:
 
 - [Installing Nginx on Debian/Ubuntu systems](https://www.linode.com/docs/websites/nginx/nginx-web-server-debian-8)
 - [Configuring Nginx](https://www.linode.com/docs/websites/nginx/how-to-configure-nginx)
