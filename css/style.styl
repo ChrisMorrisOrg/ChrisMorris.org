@@ -145,6 +145,10 @@ header#global-header {
   ul.column-list {
     column-count: 2;
     column-gap: 0em;
+    li {
+      break-inside: avoid-column;
+      page-break-inside: avoid;
+    }
   }
   ul.link-list {
     list-style: none;
