@@ -142,6 +142,10 @@ header#global-header {
 
 #main-container {
   display: flex;
+  ul.column-list {
+    column-count: 2;
+    column-gap: 0em;
+  }
   ul.link-list {
     list-style: none;
     margin: 0;
@@ -357,6 +361,10 @@ div#overlay {
 @media only screen and (max-width: 46em) {
   #main-container {
     display: block;
+    ul.column-list {
+      column-count: 1;
+      column-gap: 0em;
+    }
     section#main {
       width: 100%;
     }
