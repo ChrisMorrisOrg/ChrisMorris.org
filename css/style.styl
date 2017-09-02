@@ -3,11 +3,12 @@
 $standard-text-color = rgb(40, 40, 40)
 $standard-text-color-highlight = rgb(40, 40, 40)
 $standard-text-color-alpha = rgba(40, 40, 40, 0.5)
-$frosted-background-color = rgba(3, 50, 134, 0.8)
-$frosted-background-intensity = 0.5em
+$stripe-color-center = rgba(5, 95, 255, 1)
+$stripe-color-end = rgba(5, 95, 255, 0)
+$frosted-background-color = rgba(230, 240, 255, 0.75)
+$frosted-background-intensity = 1em
 
 blockquote.twitter-tweet {
-  // font-family: "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: "soleil", sans-serif;
 }
 
@@ -20,10 +21,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-attachment: fixed;
-  background-clip: border-box;
-  background-color: rgb(255, 255, 255);
-  // font-family: "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: rgb(255, 255, 255);
   font-family: "soleil", sans-serif;
   font-weight: 400;
   font-smoothing: antialiased;
@@ -31,10 +29,6 @@ body {
   color: $standard-text-color;
   height: 100%;
   cursor: default;
-}
-body.black {
-  // background-color: rgb(25, 25, 25);
-  // background-image: none;
 }
 a, footer, li img {
   transition-duration: 0.2s;
@@ -60,6 +54,10 @@ strong {
 }
 
 header#global-header {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-image: linear-gradient(to right, $stripe-color-end, $stripe-color-center 50%, $stripe-color-end);
+  border-image-slice: 1;
   z-index: 9;
   width: 100%;
   position: fixed;
@@ -76,7 +74,6 @@ header#global-header {
     justify-content: space-between;
   }
   a {
-    color: rgb(255, 255, 255);
     text-decoration: none;
   }
   h1 {
@@ -85,6 +82,7 @@ header#global-header {
     margin: -0.2em 0em 0em 0em;
     a {
       padding: 1em .5em 0.8em .1em;
+      color: rgb(5, 95, 255);
     }
   }
   nav {
@@ -105,10 +103,9 @@ header#global-header {
         margin: 0;
         padding: 1em 0;
         a {
-          color: rgba(255, 255, 255, 1);
+          color: rgb(5, 95, 255);
           padding: 1em 0.5em;
           &:hover {
-            color: rgba(255, 255, 255, 1);
             text-decoration: underline;
           }
         }
@@ -117,26 +114,31 @@ header#global-header {
   }
 }
 
-#container {
-  display: block;
-  max-width: 60em;
-  margin: 0 auto;
-  padding: 4em 1em 0 1em;
-  footer#global-footer {
-    border-width: 1px 0 0 0;
-    border-style: solid;
-    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), $frosted-background-color 50%, rgba(255, 255, 255, 0));
-    border-image-slice: 1;
-    display: flex;
-    margin: 2em 0 0 0;
-    padding: 2em 0 4em 0;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
+footer#global-footer {
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-image: linear-gradient(to right, $stripe-color-end, $stripe-color-center 50%, $stripe-color-end);
+  border-image-slice: 1;
+  display: flex;
+  margin: 0;
+  padding: 2em 0 4em 0;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  div {
+    width: 100%;
   }
 }
 
+#container {
+  background: rgb(255, 255, 255);
+  display: block;
+}
+
 #main-container {
+  max-width: 60em;
+  margin: 0 auto;
+  padding: 4em 1em 2em 1em;
   display: flex;
   ul.column-list {
     column-count: 2;
